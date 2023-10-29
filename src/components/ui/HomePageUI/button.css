@@ -1,0 +1,77 @@
+.button {
+  height: 40px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.8s;
+}
+.button6 {
+  height: 40px;
+  width: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.8s;
+}
+.b1 {
+  background: -webkit-linear-gradient(0deg, transparent 50%, black 50%);
+  background-size: 400px 80px;
+  border: 1px solid black;
+}
+.b1:hover {
+  background-position: 200px 0;
+  color: white;
+}
+
+.b2 {
+  background: -webkit-linear-gradient(
+    0deg,
+    transparent 50%,
+    rgb(236, 78, 78) 50%
+  );
+  background: rgb(245, 109, 109);
+  background-size: 400px 80px;
+  border: 1px solid rgb(245, 109, 109);
+}
+
+.b2:hover {
+  background-position: 200px 0;
+  color: white;
+}
+button {
+  transition: background 0.6s ease;
+}
+
+.arrow1 {
+  animation: slide1 1s ease-in-out infinite;
+}
+
+@keyframes slide1 {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(10px, 0);
+  }
+}
+
+.carousel-status {
+  visibility: hidden;
+}
+
+.care {
+  background-image: url(../../../assets/bannerLogo/banner4.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.scroll-to-top {
+  border-radius: 50% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px !important;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+}
