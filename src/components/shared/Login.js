@@ -1,0 +1,6 @@
+"use client";
+const Login = () => {
+  return <div>hi</div>;
+};
+
+export default Login;

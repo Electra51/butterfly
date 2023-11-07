@@ -1,0 +1,303 @@
+[
+  {
+    "service_id": "1",
+    "name": "Hair Rebonding",
+    "availability": "Available",
+    "category": "Hair",
+    "review": "3",
+    "rating": "4.2",
+    "price": "210.08",
+    "icon": "https://i.ibb.co/LrnHjS1/Mask-group-removebg-preview.png",
+    "tag": [
+      "rebonding ",
+      "haircut",
+      "keratin",
+      "smoothing",
+      "hair",
+      "hairtreatment"
+    ],
+    "img": "https://i.ibb.co/XShKCwX/rebonding-Home2.png",
+    "material": "mild shampoo, blow dryer, straightening brush, flat iron, steaming, relaxant, neutralizer",
+    "detail": [
+      {
+        "id": "1",
+        "question1": "Hair Rebonding for Hair",
+        "ans1": "Hair rebonding is a chemical procedure that transforms the natural texture of your hair to help you achieve a sleek, silky, straight style. This technique involves the breaking of natural bonds in the hair chemically and then rearranging the bonds differently to give your hair a new look. Hair rebonding is ideal for those with frizzy and unmanageable hair.",
+        "img": "https://i.ibb.co/sQsBtMR/rebonding-Home.png"
+      },
+      {
+        "id": "2",
+        "question1": "The Hair Rebonding Procedure",
+        "ans1": "Your hair stylist will use a mild shampoo to clean your scalp and hair. This prepares it to go through the lengthy hair rebonding procedure. It might take 3-8 hours depending on the length and volume of your hair. Your hair will be left to dry naturally. Your stylist may blow dry it as well.Using plastic boards, every section of your hair will be coated with a relaxant, while making sure your hair is kept straight. The plastic boards are used to make sure that every strand of hair is completely covered in the product.The cream is left on for about 30 minutes. If your hair is very dry, frizzy or curly, the product may be left on for more than 30 minutes.A keratin lotion will be applied to your hair, following which your hair will be sectioned again.After rinsing and blow-drying your hair, a serum will be applied. Your hair will now be straightened using a flat iron.",
+        "img": "https://i.ibb.co/QPPrF1w/rebonding.png"
+      },
+      {
+        "id": "3",
+        "question1": "Side-Effects Of Hair Rebonding",
+        "ans1": "Every chemical treatment has its own share of side-effects. Hair breakage, damage, dryness, etc. are some of the common side effects. Moreover, the application of harsh chemicals and heat at the time of the procedure may wreak havoc on your scalp, hair and its growth.Dr. Harish Koutam, Chief Dermatologist at SkinKraft explains, “Any hair rebonding procedure will cause some hair loss. But avoiding harsh chemicals like formaldehyde can prevent hair damage to a certain extent.”"
+      }
+    ]
+  },
+  {
+    "service_id": "2",
+    "name": "Hair Oil Massage",
+    "availability": "Available",
+    "featured": "featured",
+    "category": "Hair",
+    "review": "5",
+    "rating": "4.2",
+    "price": "180.00",
+    "icon": "https://i.ibb.co/tZPS4YP/Whats-App-Image-2023-10-30-at-9-06-10-AM-1-removebg-preview.png",
+    "tag": ["massage", "smoothing", "hair", "hairtreatment", "hairmask"],
+    "img": "https://i.ibb.co/qgVCSrh/massage2.jpg",
+    "material": "Mild shampoo, Blow dryer, Straightening brush, Flat iron, Steaming, Relaxant, Neutralizer",
+    "detail": [
+      {
+        "id": "1",
+        "question1": "Oil Massage for Hair",
+        "ans1": "That beautiful, sound sleep you get after a head massage session is incomparable, right? That’s the extent of relaxation scalp massages can offer to your mind. However, its benefits are not just limited to rejuvenation.",
+        "img": "https://i.ibb.co/ydXSvZ6/massage.png"
+      },
+      {
+        "id": "2",
+        "question1": "Benefit of Oil Massage",
+        "ans1": "Massages are a good way to relax your body and mind. They also help relieve anxiety and stress that are known to trigger hair loss.A study conducted on 9 men for 24 weeks showed that gently massaging your scalp everyday for a few minutes can give a person thicker hair.Several studies also suggest that massaging your scalp regularly or on a daily basis can reduce hair fall and help regrow your hair. Massages are said to strengthen follicles and stimulate hair growth.Alopecia is an autoimmune disease that causes the hair to fall off in patches and sometimes, can result in total hair loss of the scalp. Self-reported findings have suggested that 69 per cent of men and women with alopecia have been able to regrow their hair with regular scalp massages.",
+        "img": "https://i.ibb.co/VqztBGX/Screenshot-from-2023-10-30-16-43-40.png"
+      },
+      {
+        "id": "3",
+        "question1": "How To Massage Scalp ?",
+        "ans1": "Since years, this form of massage has been immensely popular to stimulate hair growth.Using light to medium pressure, massage your scalp with your fingers in circular motions. You don't need any oil for this massage. Make sure that you cover your entire scalp.Do this for 5 minutes, at least 2 times a day.You can ask your mom or somebody else at home to pass on a helping hand as well. You could even visit a licensed massage therapist, if you have the time for it. A number of tools are available that can be used to give yourself an effective and soothing head massage. Electric brushes, scalp massagers and other tools are often recommended by dermatologists. These tools can be worked across your scalp the way you use your fingers."
+      }
+    ]
+  },
+  {
+    "service_id": "3",
+    "name": "Hair Spa",
+    "availability": "Not Available",
+    "category": "Hair",
+    "review": "7",
+    "rating": "3.8",
+    "price": "210.00",
+    "icon": "https://i.ibb.co/sj3MhNJ/download-1-removebg-preview.png",
+    "tag": ["massage", "smoothing", "hair", "hairtreatment", "hairmask"],
+    "img": "https://i.ibb.co/ZcsFQCj/spa1.png",
+    "material": "Mild shampoo, Blow dryer, Straightening brush, Flat iron, Steaming, Relaxant, Neutralizer",
+    "detail": [
+      {
+        "id": "1",
+        "question1": "Hair Spa Treatment",
+        "ans1": "Hair spa requires a lot of head massage that stimulates the blood circulation in your scalp. The procedure enhances the oxygen supply to your hair follicles. It revitalizes your scalp and improves hair growth.Ever since that friend of yours came out of a hair spa session flaunting beautifully soft, nourished and ad-worthy hair, have you been considering the treatment yourself? But you have too many questions in your mind - from whether it’s really beneficial to whether it’s worth your hard-earned money or its possible side effects.Don’t worry, we are here to make your decision easier. Here’s all you need to know about hair spa treatments, which one is the best for you and how it can benefit your hair and improve its health.",
+        "img": "https://i.ibb.co/svtJSLT/spa2.jpg"
+      },
+      {
+        "id": "2",
+        "question1": "What Are The Steps Involved In A Hair Spa Treatment?",
+        "ans1": "A typical hair spa involves shampooing, hair masks, massage and steaming. However, the format of the steps may vary from parlour to parlour.Your hair is first washed with shampoo to remove dirt and dead skin cells.This is the most important step of your hair spa. It involves applying a serum-like mask to your hair and leaving it on for a few minutes. The mask is meant to rid your scalp of dryness and flakes, besides strengthening and nourishing your hair follicles. This makes it appear smooth, bright and frizz-free.Massages increase blood flow to your hair follicles, boosting hair growth and improving the health of your hair. It also ensures that the mask applied reaches every corner of your hair and scalp.It is similar to a facial, except that the steam is focused on your hair. This allows the pores on your scalp to open-up, promoting the absorption of the product that was previously applied to your scalp.",
+        "img": "https://i.ibb.co/10mC5Gw/spa3.jpg"
+      },
+      {
+        "id": "3",
+        "question1": "Benefits Of Hair Spa",
+        "ans1": "Removes impurities and unclogs scalp pores: Cleansing your scalp is as necessary as the rest of your skin. Clogged pores can contribute to a host of hair issues. Unclogging pores is effective in regenerating hair growth. Improves blood circulation: Apart from being a feel-good factor, the massages help enhance blood flow to your scalp. This brings nutrients to the follicles that makes them firmer and stronger. It can eventually result in voluminous hair as well.Normalizes oil secretion: Similar to the skin, sebaceous glands are present under your scalp which produces a natural oil called sebum. This oil keeps your hair and scalp healthy.However, sometimes, an overproduction of this oil can result in clogged pores.If you have a dry scalp, your sebaceous glands are probably not producing the right amount of sebum, which is equally bad. Hair spa treatments aim at regulating sebum production on your scalp to help you achieve healthy and voluminous hair."
+      }
+    ]
+  },
+  {
+    "service_id": "4",
+    "name": "Pedicure",
+    "availability": "Available",
+    "category": "Nail",
+    "featured": "featured",
+    "review": "7",
+    "rating": "3.8",
+    "price": "180.00",
+    "icon": "https://i.ibb.co/Y3BLGcX/pedicure.jpg",
+    "tag": ["nailart", "smoothing", "nail", "nailtreatment", "manicure"],
+    "img": "https://i.ibb.co/ys56dkh/pedicure3.jpg",
+    "material": "Mild shampoo, Blow dryer, Straightening brush, Flat iron, Steaming, Relaxant, Neutralizer",
+    "detail": [
+      {
+        "id": "1",
+        "question1": "Pedicure Treatment for Nail",
+        "ans1": "A pedicure is a cosmetic treatment of the feet and toenails, analogous to a manicure.During a pedicure, dead skin cells are rubbed off the bottom of the feet using a rough stone (often a pumice stone). Skincare is often provided up to the knee, including granular exfoliation, moisturizing, and massage.People have been pedicuring their nails for more than 4,000 years. In southern Babylonia, noblemen used solid gold tools to give themselves manicures and pedicures. The use of nail polish can be traced back even further. Originating in China in 3000 BC, nail colour indicated one’s social status, according to a Ming Dynasty manuscript; royal fingernails were painted black and red. Ancient Egyptians have been manicuring all the way back to 2300 BC.Regular pedicure: A simple treatment that includes foot soaking, foot scrubbing with a pumice stone or foot file, nail clipping, nail shaping, foot and calf massage, moisturizer and nail polishing.Shanghai pedicure: A traditional foot medicine deriving from Chinese medicine that involves soaking feet in hot water and using a scalpel.Spa pedicure: Includes the regular pedicure and generally adds one of the following- Paraffin dip, masks, mud or seaweed treatment.Dry or Waterless pedicure: A pedicure typically including nail shaping, cuticle cleanup, callus smoothing, moisturizer with massage, nail polish or buffing, but definitively without soaking the feet in water. Often the callus smoothing, nail shaping, and cuticle cleaning are all performed with an electric file.",
+        "img": "https://i.ibb.co/BCn2LYm/pedicure1.jpg"
+      },
+      {
+        "id": "2",
+        "question1": "Types of pedicures",
+        "ans1": "A normal pedicure (often called a regular pedicure) means you'll get your foot soaked in a sink, then scrubbed with a file or a pumice stone to remove dead skin or calluses. Afterward, your nails will be trimmed and shaped, then polished (with a specific color, if you want). Other types include:Shellac Pedicure Since chipped nails after a pedicure can be a drag, some prefer the shellac pedicure, which uses a special polish and a UV lamp that should allow your polish to last about two weeks.The gel pedicure is virtually the same as a shellac pedicure, except it uses a gel instead of a polish to keep your nail color from chipping.A spa pedicure puts the emphasis on pampering. These vary, but in addition to a regular pedicure, a spa pedicure might come with a longer massage, a paraffin wax treatment, or a hot-stone treatment to ease muscle pain.",
+        "img": "https://i.ibb.co/82T3F7W/padicure2.jpg"
+      },
+      {
+        "id": "3",
+        "question1": "Benefits Of Pedicure",
+        "ans1": "Most people get a pedicure to relax or cosmetic touch-ups, but there are a few potential health benefits as well:Infection detection: A nail artist might be able to detect fungal infections or bunions early, so you can deal with them before they become an issue.Softer skin: Many pedicures will use creams, lotions, and other add-ons that work to cure dry skin. And nearly all of them include exfoliation to remove any dead, unnecessary skin.Stress relief: If you can relax during a pedicure, you might get a psychological boost."
+      }
+    ]
+  },
+  {
+    "service_id": "5",
+    "name": "Manicure",
+    "availability": "Available",
+    "category": "Nail",
+    "review": "8",
+    "rating": "4.8",
+    "price": "180.00",
+    "icon": "https://i.ibb.co/Dbwz35v/manicure.jpg",
+    "tag": ["nailart", "smoothing", "nail", "nailtreatment", "manicure"],
+    "img": "https://i.ibb.co/HDr84M3/manicure1.jpg",
+    "material": "Mild shampoo, Blow dryer, Straightening brush, Flat iron, Steaming, Relaxant, Neutralizer",
+    "detail": [
+      {
+        "id": "1",
+        "question1": "manicure Treatment for Nail",
+        "ans1": "A manicure is a cosmetic treatment of the feet and toenails, analogous to a manicure.During a manicure, dead skin cells are rubbed off the bottom of the feet using a rough stone (often a pumice stone). Skincare is often provided up to the knee, including granular exfoliation, moisturizing, and massage.People have been pedicuring their nails for more than 4,000 years. In southern Babylonia, noblemen used solid gold tools to give themselves manicures and manicures. The use of nail polish can be traced back even further. Originating in China in 3000 BC, nail colour indicated one’s social status, according to a Ming Dynasty manuscript; royal fingernails were painted black and red. Ancient Egyptians have been manicuring all the way back to 2300 BC.Regular manicure: A simple treatment that includes foot soaking, foot scrubbing with a pumice stone or foot file, nail clipping, nail shaping, foot and calf massage, moisturizer and nail polishing.Shanghai manicure: A traditional foot medicine deriving from Chinese medicine that involves soaking feet in hot water and using a scalpel.Spa manicure: Includes the regular manicure and generally adds one of the following- Paraffin dip, masks, mud or seaweed treatment.Dry or Waterless manicure: A manicure typically including nail shaping, cuticle cleanup, callus smoothing, moisturizer with massage, nail polish or buffing, but definitively without soaking the feet in water. Often the callus smoothing, nail shaping, and cuticle cleaning are all performed with an electric file.",
+        "img": "https://i.ibb.co/SmcDB8c/manicure2.jpg"
+      },
+      {
+        "id": "2",
+        "question1": "Types of manicures",
+        "ans1": "A normal manicure (often called a regular manicure) means you'll get your foot soaked in a sink, then scrubbed with a file or a pumice stone to remove dead skin or calluses. Afterward, your nails will be trimmed and shaped, then polished (with a specific color, if you want). Other types include:Shellac manicure Since chipped nails after a manicure can be a drag, some prefer the shellac manicure, which uses a special polish and a UV lamp that should allow your polish to last about two weeks.The gel manicure is virtually the same as a shellac manicure, except it uses a gel instead of a polish to keep your nail color from chipping.A spa manicure puts the emphasis on pampering. These vary, but in addition to a regular manicure, a spa manicure might come with a longer massage, a paraffin wax treatment, or a hot-stone treatment to ease muscle pain.",
+        "img": "https://i.ibb.co/bbSH2H2/manicure3.jpg"
+      },
+      {
+        "id": "3",
+        "question1": "Benefits Of Manicure",
+        "ans1": "Most people get a manicure to relax or cosmetic touch-ups, but there are a few potential health benefits as well:Infection detection: A nail artist might be able to detect fungal infections or bunions early, so you can deal with them before they become an issue.Softer skin: Many manicures will use creams, lotions, and other add-ons that work to cure dry skin. And nearly all of them include exfoliation to remove any dead, unnecessary skin.Stress relief: If you can relax during a manicure, you might get a psychological boost."
+      }
+    ]
+  },
+  {
+    "service_id": "6",
+    "name": "Nail Art",
+    "availability": "Available",
+    "category": "Nail",
+    "featured": "featured",
+    "review": "12",
+    "rating": "4.8",
+    "price": "280.00",
+    "icon": "https://i.ibb.co/5B892V1/art1.jpg",
+    "tag": ["nailart", "smoothing", "nail", "nailtreatment", "manicure"],
+    "img": "https://i.ibb.co/74NN2pZ/nailart1.jpg",
+    "material": "Mild shampoo, Blow dryer, Straightening brush, Flat iron, Steaming, Relaxant, Neutralizer",
+    "detail": [
+      {
+        "id": "1",
+        "question1": "Nail Art",
+        "ans1": "A short simple silhouette calls for a dimensional design that will accentuate the hands through color,” says Arnold, who recommends trying a different shade on each nail, a micro-French design, or both together. Celebrity manicurist, Betina Goldstein, has some good examples for nails that are shorter in length, but are equally as stunning.Snake print nails are edgy, unexpected, and surprisingly neutral. Nail artist Zola Ganzorigt created this slithery set for Jenna Dewan using foil.Not sure if you want tips or reverse half moons? This split nail design gives you the best of both worlds. A white base with black art creates the most striking contrast.These fun two-toned swoops in burgundy and light purple are contrast perfection.Kind of like a mood ring, but instead of changing colors, you can pick the color you want your aura to be. FYI, pink symbolizes an open heart chakra.",
+        "img": "https://i.ibb.co/ZGt9mbW/nailart3.jpg"
+      },
+      {
+        "id": "2",
+        "question1": "Types of manicures",
+        "ans1": "Nail art is a great way to express yourself and have fun with your hands. The world of nail design may seem daunting at first, but the truth is that there’s something for everyone.With so many nail art styles to choose from, it can be a challenge deciding which is best for you. Whether you want simple designs or intricate ones, we hope this list has given you some ideas about what might work best for you and see if any of them are appealing before heading out on your next nail art adventure.",
+        "img": "https://i.ibb.co/0QzwmhV/nailart4.jpg"
+      },
+      {
+        "id": "3",
+        "question1": "Benefits Of Nail Art Design",
+        "ans1": "Nail art can be used to cover up any imperfections on your nails. Nail art is a great way to express yourself.Nail art designing is not just a way to accessorize your nails, but it also has a number of benefits that you can enjoy. From making your nails look healthier and stronger to preventing them from breaking, Here are the reasons why you should consider giving nail art a try. Nail polish designs are a really easy way to experiment with nail colors without going through complicated nail salon services."
+      }
+    ]
+  },
+  {
+    "service_id": "7",
+    "featured": "featured",
+    "name": "Aroma Therapy",
+    "availability": "Available",
+    "category": "Spa & Therapy",
+    "review": "12",
+    "rating": "4.8",
+    "price": "328.00",
+    "icon": "https://i.ibb.co/chFcNmr/aroma-removebg-preview.png",
+    "tag": ["aroma", "hotstone", "therapy", "massage", "smoothing"],
+    "img": "https://i.ibb.co/9WJxwQm/aroma1.jpg",
+    "material": "Mild shampoo, Blow dryer, Straightening brush, Flat iron, Steaming, Relaxant, Neutralizer",
+    "detail": [
+      {
+        "id": "1",
+        "question1": "Aromatherapy massage",
+        "ans1": "Aromatherapy massage is used for a variety of different reasons, including relaxation, pain management, and improved mood. These are also some of the basic benefits of massage therapy. Adding essential oils is thought to enhance such benefits.Aromatherapy is often added to a traditional massage session as an extra service. The massage therapist might diffuse an essential oil in the room during your session or they might add a few drops of oil to massage lotion and apply it directly to your skin.",
+        "img": "https://i.ibb.co/SsvFT4P/aroma2.jpg"
+      },
+      {
+        "id": "2",
+        "question1": "Aromatherapy massage and uses",
+        "ans1": "According to the NCCIH, stimulating oils to boost mood have been found effective in some studies. Examples of these include lemon, orange, and tangerine. However, lavender, though widely considered safe, was found not to affect mood in that same study.Another study looked at the effects of chamomile and massage therapy for anxiety relief. According to the National Cancer Institute (NCI)Trusted Source, the results showed a greater decrease in anxiety symptoms after massages with chamomile versus massage without aromatherapy.Overall, the NCI notes that aromatherapy has shown benefits for the following uses:",
+        "img": "https://i.ibb.co/wwDpQcv/aroma3.jpg"
+      },
+      {
+        "id": "3",
+        "question1": "Benefits Of Aromatherapy massage",
+        "ans1": "Reduced Pain and Inflammation. Essential oils and therapeutic massage work well to reduce pain in your joints and muscles, along with any inflammation that can be contributing to your discomfort. When the tissues are stimulated and circulation is increased, you'll begin to feel soothing of your aching muscles.",
+        "img": "https://i.ibb.co/nsR4CsH/aroma4.jpg"
+      }
+    ]
+  },
+  {
+    "service_id": "8",
+    "name": "HotStone Therapy",
+    "availability": "Available",
+    "category": "Spa & Therapy",
+    "review": "12",
+    "rating": "4.8",
+    "price": "420.00",
+    "icon": "https://i.ibb.co/ggwJZGk/stone-removebg-preview.png",
+    "tag": ["aroma", "hotstone", "therapy", "massage", "smoothing"],
+    "img": "https://i.ibb.co/C7M79H1/stonetherapy.jpg",
+    "material": "Mild shampoo, Blow dryer, Straightening brush, Flat iron, Steaming, Relaxant, Neutralizer",
+    "detail": [
+      {
+        "id": "1",
+        "question1": "Hot Stone Massage Therapy",
+        "ans1": "A hot stone massage is a type of massage in which the masseuse places smooth, hot stones on your back. These stones provide heat therapy to the muscles, which can help reduce tension and pain. The stones used in hot stone massage are typically basalt, volcanic rock that is usually high in iron, which allows them to absorb heat.",
+        "img": "https://i.ibb.co/VgCcb1G/stone2.jpg"
+      },
+      {
+        "id": "2",
+        "question1": "Hot Stone Massage Techniques",
+        "ans1": "Like stone placement, the techniques that your masseuse uses with the hot stones will depend on your specific needs. Therapists often use circular movements, kneading, long strokes, and vibrations. The hot stones can be used alone or incorporated into other types of massage, like Swedish massage.",
+        "img": "https://i.ibb.co/3RqRRNv/stone3.jpg"
+      },
+      {
+        "id": "3",
+        "question1": "Benefits Of Hot stone massage therapy",
+        "ans1": " Hot stone massage can relieve pain and tension in your muscles due to the combination of massage therapy and heat. Heat is often recommended as a way to treat achy muscles. Applying heat to an area of the body helps increase blood flow to that spot, which improves healing. Using heat on muscle knots before massaging the area can make those knots easier to soothe.",
+        "img": "https://i.ibb.co/H7NLgzm/stone4.jpg"
+      }
+    ]
+  },
+  {
+    "service_id": "9",
+    "name": "Body Massage",
+    "availability": "Available",
+    "category": "Spa & Therapy",
+    "review": "12",
+    "rating": "4.8",
+    "price": "420.00",
+    "icon": "https://i.ibb.co/mHQSRF0/download-removebg-preview.png",
+    "tag": ["aroma", "hotstone", "therapy", "massage", "smoothing", "body"],
+    "img": "https://i.ibb.co/2hGf3CY/body2.jpg",
+    "material": "Blow dryer, Straightening brush, Flat iron, Steaming, Relaxant, Neutralizer",
+    "detail": [
+      {
+        "id": "1",
+        "question1": "Body Massage",
+        "ans1": "Massage is the stroking, kneading, warming, rolling and pressing of skin and muscles.There are lots of different kinds of massage, each with broadly different origins and aims - some focus on soothing muscle pain; others on increasing energy levels; some aim to improve a specific physical condition; others simply to help you relax.Massage makes you feel good in lots of ways, and can have a positive effect on your whole body - your bones, your muscles, your heart, your skin, your breathing, digestion, and your mental health.",
+        "img": "https://i.ibb.co/Q8d9DfS/body1.jpg"
+      },
+      {
+        "id": "2",
+        "question1": "Body Massage Techniques",
+        "ans1": "Like stone placement, the techniques that your masseuse uses with the Bodys will depend on your specific needs. Therapists often use circular movements, kneading, long strokes, and vibrations. The Bodys can be used alone or incorporated into other types of massage, like Swedish massage.",
+        "img": "https://i.ibb.co/T0Kygsk/body3.jpg"
+      },
+      {
+        "id": "3",
+        "question1": "Health benefits of massage",
+        "ans1": "In its various forms, theraputic massage can help to cure and relieve a wide range of complaints. Research shows that it is particularly good at relieving stress-related problems, from anxiety and panic attacks, through to asthma, constipation and high blood pressure. It is effective at providing pain relief - treating chronic pain, back pain and even arthritis. It is also being used more and more with stroke and cancer patients and with people with dementia."
+      }
+    ]
+  }
+]

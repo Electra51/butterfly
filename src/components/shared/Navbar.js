@@ -116,10 +116,13 @@ const Navbar = () => {
             <AiOutlineShoppingCart className="text-2xl" />
           </div>{" "}
         </Link>
-        <div className="flex items-center cursor-pointer">
-          <AiOutlineUser />
-          <a className="text-[14px]">Login/Register</a>
-        </div>
+        <Link href="/login">
+          {" "}
+          <div className="flex items-center cursor-pointer">
+            <AiOutlineUser />
+            <a className="text-[14px]">Login/Register</a>
+          </div>
+        </Link>
       </div>
     </div>
   );

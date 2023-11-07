@@ -7,10 +7,13 @@ import OurCare from "@/components/ui/HomePageUI/OurCare";
 import PricingPlan from "@/components/ui/HomePageUI/PricingPlan";
 import ShopProducts from "@/components/ui/ShopPageUI/ShopProducts";
 import Testimonials from "@/components/ui/HomePageUI/Testimonials";
+import Navbar from "@/components/shared/Navbar";
+import Footer from "@/components/shared/Footer";
 
 export default function Home() {
   return (
     <div>
+      <Navbar />
       <Banner />
       <CompanyLogo />
       <FeatureService />
@@ -19,6 +22,7 @@ export default function Home() {
       <Testimonials />
       <ImageGallery />
       <PricingPlan />
+      <Footer />
     </div>
   );
 }

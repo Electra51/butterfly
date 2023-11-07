@@ -2,6 +2,7 @@ import BreadCrumb from "@/components/shared/BreadCrumb";
 import AboutUs from "@/components/ui/AboutUsPageUI/AboutUs";
 import OurProduct from "@/components/ui/AboutUsPageUI/OurProduct";
 import OurTeam from "@/components/ui/AboutUsPageUI/OurTeam";
+
 const aboutPage = () => {
   return (
     <div>

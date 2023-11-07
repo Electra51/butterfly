@@ -4,6 +4,7 @@ import React from "react";
 import aboutImage from "../../../assets/bannerLogo/about.png";
 import Image from "next/image";
 import { BsArrowRightShort } from "react-icons/bs";
+import Link from "next/link";
 const About = () => {
   return (
     <div className="mt-32 grid grid-cols-2 gap-6 items-center max-w-6xl mx-auto">
@@ -28,9 +29,12 @@ const About = () => {
           about the best quality, we hire the best specialists and provide the
           best customer service.
         </p>
-        <button className="button b1 mt-10">
-          Explore More <BsArrowRightShort className="arrow1 text-2xl" />
-        </button>
+        <Link href="/about-us">
+          {" "}
+          <button className="button b1 mt-10">
+            Explore More <BsArrowRightShort className="arrow1 text-2xl" />
+          </button>
+        </Link>
       </div>
     </div>
   );

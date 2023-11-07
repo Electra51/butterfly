@@ -1,9 +1,8 @@
-import BreadCrumb from "@/components/shared/BreadCrumb";
 import BreadCrumb2 from "@/components/shared/BreadCrumb2";
 import Star from "@/components/shared/Star";
 import DetailsImage from "@/components/ui/ShopPageUI/DetailsImage";
 import RelatedProduct from "@/components/ui/ShopPageUI/RelatedProduct";
-import ShopCard from "@/components/ui/ShopPageUI/ShopCard";
+
 const ShopDetails = async ({ params }) => {
   const res = await fetch(`http://localhost:5000/products/${params?.id}`, {
     cache: "no-store",

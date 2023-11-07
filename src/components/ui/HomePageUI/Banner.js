@@ -17,7 +17,7 @@ import "./button.css";
 const Banner = () => {
   return (
     <Carousel autoPlay infiniteLoop>
-      <div className="relative">
+      {/* <div className="relative">
         <Image src={img0} alt="banner" className="w-full" />
         <div className="backdrop-blur-sm absolute top-[27%] right-[32%] bg-white bg-opacity-30 h-72 w-[510px]">
           <div className="flex flex-col justify-center items-center my-auto mt-20">
@@ -30,9 +30,9 @@ const Banner = () => {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="relative">
-        <Image src={img1} alt="banner" className="w-full" />
+        <Image src={img1} alt="banner" priority className="w-full" />
         <div className="backdrop-blur-sm absolute top-[27%] right-[5%] bg-white bg-opacity-30 h-72 w-[510px]">
           <div className="flex flex-col justify-center items-center my-auto mt-20">
             <p className="text-gray-600 tracking-[0.3rem]">You Look Good</p>
@@ -47,7 +47,7 @@ const Banner = () => {
         </div>
       </div>
       <div className="relative">
-        <Image src={img2} alt="banner" className="w-full" />
+        <Image src={img2} alt="banner" priority className="w-full" />
         <div className="backdrop-blur-sm absolute top-[27%] left-[10%]">
           <div className="flex flex-col justify-start items-start my-auto mt-20 text-white">
             <p className="text-gray-300 tracking-[0.3rem]">We Make Best Spa</p>
@@ -62,7 +62,7 @@ const Banner = () => {
         </div>
       </div>
       <div className="relative">
-        <Image src={img3} alt="banner" className="w-full" />
+        <Image src={img3} alt="banner" priority className="w-full" />
         <div className="absolute top-[27%] right-[20%]">
           <div className="flex flex-col justify-center items-center my-auto mt-20">
             <p className="text-gray-600 tracking-[0.3rem]">
@@ -79,7 +79,7 @@ const Banner = () => {
         </div>
       </div>
       <div className="relative">
-        <Image src={img4} alt="banner" className="w-full" />
+        <Image src={img4} alt="banner" priority className="w-full" />
         <div className="absolute top-[27%] left-[10%]">
           <div className="flex flex-col justify-start items-start my-auto mt-20">
             <p className="text-gray-600 tracking-[0.3rem]">
@@ -96,7 +96,7 @@ const Banner = () => {
         </div>
       </div>
       <div className="relative">
-        <Image src={img5} alt="banner" className="w-full" />
+        <Image src={img5} alt="banner" priority className="w-full" />
         <div className="absolute top-[27%] left-[10%]">
           <div className="flex flex-col justify-start items-start my-auto mt-20">
             <p className="text-gray-600 tracking-[0.3rem]">Silky Hair</p>
@@ -112,7 +112,7 @@ const Banner = () => {
         </div>
       </div>
       <div className="relative">
-        <Image src={img6} alt="banner" className="w-full" />
+        <Image src={img6} alt="banner" priority className="w-full" />
         <div className="absolute top-[27%] right-[10%]">
           <div className="flex flex-col justify-start items-start my-auto mt-20">
             <p className="text-gray-600 tracking-[0.3rem]">Products For</p>
@@ -127,7 +127,7 @@ const Banner = () => {
         </div>
       </div>
       <div className="relative">
-        <Image src={img7} alt="banner" className="w-full" />
+        <Image src={img7} alt="banner" priority className="w-full" />
         <div className="backdrop-blur-sm absolute top-[30%] left-[30%] bg-white bg-opacity-30 h-72 w-[510px]">
           <div className="flex flex-col justify-center items-center my-auto mt-20">
             <p className="text-gray-600 tracking-[0.3rem]">Make Hair shining</p>
