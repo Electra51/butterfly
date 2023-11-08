@@ -15,7 +15,7 @@ import { FcGoogle } from "react-icons/fc";
 import BreadCrumb from "./BreadCrumb";
 
 const SignUp = () => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState({ password: false, correctPass: false });
   return (
     <div
       style={{
@@ -59,19 +59,20 @@ const SignUp = () => {
             <div className="relative">
               {" "}
               <input
-                type={`${show ? "text" : "password"}`}
+                type={`${show.password ? "text" : "password"}`}
                 placeholder="password"
+                name="password"
                 className="input input-bordered rounded-none w-full"
               />
-              {show ? (
+              {show.password ? (
                 <AiOutlineEye
                   className="absolute top-4 right-3 text-xl text-gray-600 cursor-pointer"
-                  onClick={() => setShow(!show)}
+                  onClick={() => setShow({ ...show, password: !show.password })}
                 />
               ) : (
                 <AiOutlineEyeInvisible
                   className="absolute top-4 text-xl right-3 text-gray-400 cursor-pointer"
-                  onClick={() => setShow(!show)}
+                  onClick={() => setShow({ ...show, password: !show.password })}
                 />
               )}
             </div>
@@ -81,19 +82,24 @@ const SignUp = () => {
             <div className="relative">
               {" "}
               <input
-                type={`${show ? "text" : "password"}`}
+                type={`${show.correctPass ? "text" : "password"}`}
+                name="correctPass"
                 placeholder="password"
                 className="input input-bordered rounded-none w-full"
               />
-              {show ? (
+              {show.correctPass ? (
                 <AiOutlineEye
                   className="absolute top-4 right-3 text-xl text-gray-600 cursor-pointer"
-                  onClick={() => setShow(!show)}
+                  onClick={() =>
+                    setShow({ ...show, correctPass: !show.correctPass })
+                  }
                 />
               ) : (
                 <AiOutlineEyeInvisible
                   className="absolute top-4 text-xl right-3 text-gray-400 cursor-pointer"
-                  onClick={() => setShow(!show)}
+                  onClick={() =>
+                    setShow({ ...show, correctPass: !show.correctPass })
+                  }
                 />
               )}
             </div>
@@ -109,6 +115,25 @@ const SignUp = () => {
           <button className="buttons bs mt-7 text-[14px]" type="submit">
             Login with Google <FcGoogle className="text-2xl " />
           </button>
+        </div>
+        <div className="flex items-start justify-normal gap-1 mt-4 text-[14px]">
+          <input type="checkbox" className="mt-1" />{" "}
+          <p>
+            By Creating your account you agree the{" "}
+            <Link href="/terms">
+              {" "}
+              <span className="font-medium text-black underline hover:cursor-pointer hover:text-blue-500">
+                Terms of Service
+              </span>{" "}
+            </Link>
+            and{" "}
+            <Link href="/policy">
+              {" "}
+              <span className="font-medium text-black underline hover:cursor-pointer hover:text-blue-500">
+                Privacy Policy.
+              </span>
+            </Link>
+          </p>
         </div>
         <p className="text-center mt-5 text-[14px]">
           Already have an account?{" "}

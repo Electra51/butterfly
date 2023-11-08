@@ -7,10 +7,11 @@ import {
   AiOutlineShoppingCart,
   AiOutlineUser,
 } from "react-icons/ai";
-import { useState } from "react";
+import { use, useState } from "react";
 import Link from "next/link";
 
 const Navbar = () => {
+  const [session, setSession] = useState(false);
   const [toggole, setToggole] = useState(false);
   const toggleHandle = () => {
     setToggole(!toggole);
@@ -71,9 +72,13 @@ const Navbar = () => {
           <li>
             <Link href="/shop">Shop</Link>
           </li>
-          <li>
-            <Link href="/about-us">About Us</Link>
-          </li>
+          {session ? (
+            <li>
+              <Link href="/about-us">DashBoard</Link>
+            </li>
+          ) : (
+            ""
+          )}
         </ul>
       </div>
       <div className="navbar-end">
