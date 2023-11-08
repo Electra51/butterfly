@@ -7,7 +7,7 @@ const AboutUs = () => {
     <div className="mt-32 grid grid-cols-2 gap-10 items-center max-w-6xl mx-auto">
       <div>
         {" "}
-        <Image src={imgAbout} alt="about Image" />
+        <Image src={imgAbout} alt="about Image" priority />
       </div>
       <div>
         <p className="tracking-[0.2rem] text-xl border-b">About us</p>

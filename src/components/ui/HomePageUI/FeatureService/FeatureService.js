@@ -1,6 +1,5 @@
 "use client";
 import SectionTitle from "@/components/shared/SectionTitle";
-import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const FeatureService = () => {
@@ -18,15 +17,9 @@ const FeatureService = () => {
     <div className="mt-32 flex flex-col justify-center max-w-6xl mx-auto">
       <SectionTitle heading={"Featured Services"}></SectionTitle>
       <div className="mt-5 grid grid-cols-3">
-        {featuredServices?.map(
-          (e, i) => (
-            <div>{e?.name}</div>
-          )
-          // console.log(e?.img)
-          // {
-          //   <Image src={e?.img} alt="" width={300} />;
-          // }
-        )}
+        {featuredServices?.map((e, i) => (
+          <div key={i}>{e?.name}</div>
+        ))}
       </div>
     </div>
   );

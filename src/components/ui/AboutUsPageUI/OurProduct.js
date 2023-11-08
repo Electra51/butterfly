@@ -23,7 +23,7 @@ const OurProduct = () => {
       </div>
       <div>
         {" "}
-        <Image src={productLogo} alt="about Image" />
+        <Image src={productLogo} alt="about Image" priority />
       </div>
     </div>
   );

@@ -28,69 +28,129 @@ const CompanyLogo = () => {
       <Slider {...settings}>
         <div>
           <div className="h-32 w-32 flex justify-center items-center mt-5 mb-0">
-            <Image src={logo1} alt="" className="w-full object-cover" />
+            <Image
+              src={logo1}
+              alt=""
+              className="w-full object-cover"
+              priority
+            />
           </div>
         </div>
         <div>
           <div className="h-32 w-32 flex justify-center items-center mt-5">
-            <Image src={logo2} alt="" className="w-full object-cover" />
+            <Image
+              src={logo2}
+              alt=""
+              className="w-full object-cover"
+              priority
+            />
           </div>
         </div>
         <div>
           <div className="h-32 w-32 flex justify-center items-center mt-5">
-            <Image src={logo3} alt="" className="w-full object-cover" />
+            <Image
+              src={logo3}
+              alt=""
+              className="w-full object-cover"
+              priority
+            />
           </div>
         </div>
         <div>
           <div className="h-32 w-32 flex justify-center items-center mt-5">
-            <Image src={logo4} alt="" className="w-full object-cover" />
+            <Image
+              src={logo4}
+              alt=""
+              className="w-full object-cover"
+              priority
+            />
           </div>
         </div>
         <div>
           <div className="h-32 w-32 flex justify-center items-center mt-5">
-            <Image src={logo5} alt="" className="w-full object-cover" />
-          </div>
-        </div>
-        <div>
-          {" "}
-          <div className="h-32 w-32 flex justify-center items-center mt-5">
-            <Image src={logo6} alt="" className="w-full object-cover" />
-          </div>
-        </div>
-        <div>
-          {" "}
-          <div className="h-32 w-32 flex justify-center items-center mt-5">
-            <Image src={logo7} alt="" className="w-full object-cover" />
-          </div>
-        </div>
-        <div>
-          {" "}
-          <div className="h-32 w-32 flex justify-center items-center mt-5">
-            <Image src={logo8} alt="" className="w-full object-cover" />
-          </div>
-        </div>
-        <div>
-          {" "}
-          <div className="h-32 w-32 flex justify-center items-center mt-5">
-            <Image src={logo9} alt="" className="w-full object-cover" />
-          </div>
-        </div>
-        <div>
-          {" "}
-          <div className="h-32 w-32 flex justify-center items-center mt-5">
-            <Image src={logo10} alt="" className="w-full object-cover" />
+            <Image
+              src={logo5}
+              alt=""
+              className="w-full object-cover"
+              priority
+            />
           </div>
         </div>
         <div>
           {" "}
           <div className="h-32 w-32 flex justify-center items-center mt-5">
-            <Image src={logo11} alt="" className="w-full object-cover" />
+            <Image
+              src={logo6}
+              alt=""
+              className="w-full object-cover"
+              priority
+            />
           </div>
         </div>
         <div>
           {" "}
           <div className="h-32 w-32 flex justify-center items-center mt-5">
-            <Image src={logo12} alt="" className="w-full object-cover" />
+            <Image
+              src={logo7}
+              alt=""
+              className="w-full object-cover"
+              priority
+            />
+          </div>
+        </div>
+        <div>
+          {" "}
+          <div className="h-32 w-32 flex justify-center items-center mt-5">
+            <Image
+              src={logo8}
+              alt=""
+              className="w-full object-cover"
+              priority
+            />
+          </div>
+        </div>
+        <div>
+          {" "}
+          <div className="h-32 w-32 flex justify-center items-center mt-5">
+            <Image
+              src={logo9}
+              alt=""
+              className="w-full object-cover"
+              priority
+            />
+          </div>
+        </div>
+        <div>
+          {" "}
+          <div className="h-32 w-32 flex justify-center items-center mt-5">
+            <Image
+              src={logo10}
+              alt=""
+              className="w-full object-cover"
+              priority
+            />
+          </div>
+        </div>
+        <div>
+          {" "}
+          <div className="h-32 w-32 flex justify-center items-center mt-5">
+            <Image
+              src={logo11}
+              alt=""
+              className="w-full object-cover"
+              priority
+            />
+          </div>
+        </div>
+        <div>
+          {" "}
+          <div className="h-32 w-32 flex justify-center items-center mt-5">
+            <Image
+              src={logo12}
+              alt=""
+              className="w-full object-cover"
+              priority
+            />
           </div>
         </div>
       </Slider>

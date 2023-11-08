@@ -3,7 +3,6 @@ import { useState } from "react";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
 const DetailsImage = ({ dataImage }) => {
-  // dataImage?.map((e, i) => console.log(e));
   const [wordData, setWordData] = useState(dataImage[0]);
   const [val, setVal] = useState(0);
   const handleClick = (index) => {

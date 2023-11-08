@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import ServiceCard from "./ServiceCard";
-import Image from "next/image";
 const ServicePageUI = () => {
   const [toggleState, setToggleState] = useState(1);
   const toggleTab = (index) => {

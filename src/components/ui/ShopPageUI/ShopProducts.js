@@ -27,7 +27,6 @@ const ShopProducts = () => {
     setProducType(removeDuplicate(typeArray));
   }, [shopProducts]);
 
-  // console.log("hi", producType);
   return (
     <div className="max-w-7xl mx-auto">
       <div className="mt-32">
@@ -119,7 +118,9 @@ const ShopProducts = () => {
             <p>Product Type</p>
             <div className="flex w-32 flex-wrap gap-2">
               {producType?.map((e, index) => (
-                <div className="badge badge-primary">{e}</div>
+                <div className="badge badge-primary" key={index}>
+                  {e}
+                </div>
               ))}
             </div>
           </div>

@@ -46,7 +46,9 @@ const ShopDetails = async ({ params }) => {
           <p>Weight: {data?.item_weight}</p>
           <div>
             {data?.tag_list?.map((e, i) => (
-              <div className="badge badge-primary">{e}</div>
+              <div className="badge badge-primary" key={i}>
+                {e}
+              </div>
             ))}
           </div>
           <p>{data?.details}</p>
@@ -57,7 +59,7 @@ const ShopDetails = async ({ params }) => {
       </div>
       <div className="grid grid-cols-4 max-w-7xl mx-auto gap-7">
         {data?.related?.map((e, index) => (
-          <RelatedProduct e={e} />
+          <RelatedProduct e={e} key={index} />
         ))}
       </div>
     </div>

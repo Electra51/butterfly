@@ -18,7 +18,7 @@ const OurCare = () => {
       <div className="grid grid-cols-3 justify-center items-center gap-2 mt-16">
         <div className="ml-auto relative">
           <div className="w-80 p-3 shadow-md border flex justify-center items-center rounded-md gap-2 absolute right-[-43px] top-[-80px] bg-white hover:shadow-lg">
-            <Image src={logo1} alt="" width={40} />
+            <Image src={logo1} alt="" width={40} priority />
             <div>
               <p className="font-bold">Clinical Treatments</p>
               <p className="text-[12px]">
@@ -27,7 +27,7 @@ const OurCare = () => {
             </div>
           </div>
           <div className="w-80 p-3 shadow-md  border flex justify-center items-center bg-white rounded-md gap-2 my-5">
-            <Image src={logo5} alt="" width={60} />
+            <Image src={logo5} alt="" width={60} priority />
 
             <div>
               <p className="font-bold">Green Beauty</p>
@@ -37,7 +37,7 @@ const OurCare = () => {
             </div>
           </div>
           <div className="bg-white w-80 p-3 shadow-md  border flex justify-center items-center rounded-md gap-2  absolute right-[-43px] bottom-[-80px]">
-            <Image src={logo3} alt="" width={40} />
+            <Image src={logo3} alt="" width={40} priority />
             <div>
               <p className="font-bold">No Side Effect</p>
               <p className="text-[12px]">
@@ -47,11 +47,11 @@ const OurCare = () => {
           </div>
         </div>
         <div>
-          <Image src={careImage} width={500} />
+          <Image src={careImage} alt="" width={500} priority />
         </div>
         <div className="mr-auto relative">
           <div className="bg-white w-80 p-3 shadow-md  border flex justify-center items-center rounded-md gap-2 absolute left-[-43px] top-[-80px]">
-            <Image src={logo4} alt="" width={40} />
+            <Image src={logo4} alt="" width={40} priority />
             <div>
               <p className="font-bold">Professional Care</p>
               <p className="text-[12px]">
@@ -60,7 +60,7 @@ const OurCare = () => {
             </div>
           </div>
           <div className="bg-white w-80 p-3 shadow-md  border flex justify-center items-center rounded-md gap-2 my-5">
-            <Image src={logo6} alt="" width={40} />
+            <Image src={logo6} alt="" width={40} priority />
 
             <div>
               <p className="font-bold">Non-Toxic Formula</p>
@@ -71,7 +71,7 @@ const OurCare = () => {
             </div>
           </div>
           <div className="bg-white w-80 p-3 shadow-md  border flex justify-center items-center rounded-md gap-2  absolute left-[-43px] bottom-[-80px]">
-            <Image src={logo2} alt="" width={40} />
+            <Image src={logo2} alt="" width={40} priority />
             <div>
               <p className="font-bold">Personalized Experience</p>
               <p className="text-[12px]">
