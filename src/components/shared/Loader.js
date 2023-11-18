@@ -4,7 +4,7 @@ import img2 from "../../assets/logo/new.png";
 import { ThreeDots } from "react-loader-spinner";
 const Loader = () => {
   return (
-    <div className="flex justify-center items-center gap-5">
+    <div className="flex justify-center items-center mt-20 gap-5">
       <Image src={img2} alt="" width={200} />
       <ThreeDots
         height="80"
