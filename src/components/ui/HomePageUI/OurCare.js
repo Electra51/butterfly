@@ -12,7 +12,7 @@ import logo6 from "../../../assets/logo/logo6.png";
 import "./button.css";
 const OurCare = () => {
   return (
-    <div className="mt-32 care py-12 bg-fixed">
+    <div className="mt-32 py-12">
       <SectionTitle heading={"Our Philoshophy"} />
 
       <div className="grid grid-cols-3 justify-center items-center gap-2 mt-16">
@@ -26,7 +26,7 @@ const OurCare = () => {
               </p>
             </div>
           </div>
-          <div className="w-80 p-3 shadow-md  border flex justify-center items-center bg-white rounded-md gap-2 my-5">
+          <div className="group w-80 p-3 shadow-md  border flex justify-center items-center bg-white rounded-md gap-2 my-5 transform group-hover:-translate-y-1 duration-300">
             <Image src={logo5} alt="" width={60} priority />
 
             <div>

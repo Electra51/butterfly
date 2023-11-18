@@ -1,101 +1,89 @@
 "use client";
+import AddToCardBtn from "@/components/shared/AddToCardBtn";
 import Star from "@/components/shared/Star";
+import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { FaRegEye, FaRegHeart, FaStar } from "react-icons/fa";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
-import SweetAlert2 from "react-sweetalert2";
 const ShopCard = ({ product }) => {
-  // const handleAddToCart = (product) => {
-  //   console.log(product);
-  // };
-  const handleAddToCart = (product) => {
-    console.log(product);
-    // if (user && user.email) {
-    // const cartItem = {
-    //   menuItemId: _id,
-    //   name,
-    //   image,
-    //   price,
-    //   email: user.email,
-    // };
-    fetch("http://localhost:5000/carts", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(cartItem),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.insertedId) {
-          refetch(); // refetch cart to update the number of items in the cart
-          SweetAlert2.fire({
-            position: "top-end",
-            icon: "success",
-            title: "Food added on the cart.",
-            showConfirmButton: false,
-            timer: 1500,
-          });
-        }
-      });
-    // }
-    // else {
-    //   Swal.fire({
-    //     title: "Please login to order the food",
-    //     icon: "warning",
-    //     showCancelButton: true,
-    //     confirmButtonColor: "#3085d6",
-    //     cancelButtonColor: "#d33",
-    //     confirmButtonText: "Login now!",
-    //   }).then((result) => {
-    //     if (result.isConfirmed) {
-    //       navigate("/login", { state: { from: location } });
-    //     }
-    //   });
-    // }
-  };
+  // console.log("product", product.img[0].img1st);
+
   return (
     <PhotoProvider>
-      <div className="w-80 h-96 bg-base-100 shadow-xl relative mt-2 overflow-y-hidden">
+      <div
+        // className="w-80 h-96 bg-base-100 shadow-xl relative mt-2 overflow-y-hidden"
+        className="group bg-base-100 shadow-xl transform group-hover:-translate-y-1 duration-300 relative"
+        style={{
+          boxShadow: "rgb(193 165 73 / 44%) 0px 7px 29px 0px",
+        }}
+      >
+        <div
+          className="w-full h-full absolute top-0 left-0 bg-[#c2a74e] opacity-0 group-hover:opacity-10 transition-opacity duration-300"
+          style={{ zIndex: -2 }}
+        ></div>
+        <div
+          className="invisible group-hover:visible absolute bottom-[50%] left-2"
+          style={{ zIndex: 1 }}
+        >
+          <div className="bg-[#c2a74e] text-white p-2">
+            <Link href={`/services/${product._id}`}>
+              <AiOutlineShoppingCart />
+            </Link>
+          </div>
+
+          <div className="bg-[#c2a74e] text-white p-2 mt-1">
+            {/* <FaHeart /> */}
+            <FaRegHeart />
+          </div>
+        </div>
+        <div className="border border-[#C2A74E] text-[#C2A74E] px-1 py-0 absolute right-2 top-2 text-[12px] flex items-center gap-1 rounded-sm">
+          {product?.rating}
+          <FaStar className="text-[#ecdb3bf3]" />
+        </div>
         <div className="h-56">
-          <PhotoView src={product?.img[0].img1st}>
-            <img
-              src={product?.img[0].img1st}
+          <PhotoView src={product.img[0].img1st}>
+            <Image
+              src={product.img[0].img1st}
+              width={500}
+              height={500}
               alt="Shoes"
               className="w-full h-full object-contain p-5"
             />
           </PhotoView>
         </div>
-        <div className="flex-grow-0 px-3 py-2 ">
-          <div className="flex justify-between">
+        <div className="flex-grow-0">
+          <div className="card-body">
             {" "}
-            {product?.name?.length > 26 ? (
+            {product?.name?.length > 25 ? (
               <p className="text-[18px]">
-                {product?.name.slice(0, 26) + "..."}
+                {product?.name.slice(0, 25) + "..."}
               </p>
             ) : (
               <p className="text-[18px]">{product?.name}</p>
             )}
-            {/* {product?.name} */}
-          </div>
-          <div className="flex justify-between text-center">
-            <div className="flex align-middle justify-items-center">
+            <div className="flex justify-between items-center">
+              {/* <div className="flex align-middle justify-items-center">
               <Star ratingPoint={product?.rating} />
+            </div> */}
+              <p className="font-semibold text-[#aa9d28fd] text-[14px]">
+                Price: $ {product?.price}
+              </p>
+              {product?.stock == "Out of Stock" ? (
+                <div className="badge bg-red-600 text-white text-[12px]">
+                  {product?.stock}
+                </div>
+              ) : (
+                <div className="badge bg-green-600 text-white text-[11px]">
+                  {product?.stock}
+                </div>
+              )}
             </div>
-            {product?.stock == "Out of Stock" ? (
-              <div className="badge bg-red-600 text-white">
-                {product?.stock}
-              </div>
-            ) : (
-              <div className="badge bg-green-600 text-white">
-                {product?.stock}
-              </div>
-            )}
+            <Link href={`/shop/${product?._id}`}>
+              <button className="buttonNLog1 bNLog1">View Details</button>
+            </Link>
           </div>
-          <p className="font-semibold text-[#F88E1A]">
-            Price: $ {product?.price}
-          </p>
 
           {/* {description.length > 70 ? (
             <p className="text-[14px]">{description.slice(0, 70) + "..."}</p>
@@ -103,19 +91,7 @@ const ShopCard = ({ product }) => {
             <p className="text-[14px]">{description}</p>
           )} */}
 
-          <div className="card-actions justify-between">
-            <Link href={`/shop/${product?._id}`}>
-              <button className="an border bg-[#F88E1A] rounded-none !px-3 py-1  ml-3 hover:bg-[#bf680a] !text-white my-3">
-                View Detail
-              </button>
-            </Link>
-            <button
-              onClick={() => handleAddToCart(product)}
-              className="an border bg-[#F88E1A] rounded-none !px-3 py-1  ml-3 hover:bg-[#bf680a] !text-white my-3 flex items-center gap-3"
-            >
-              Add Cart <AiOutlineShoppingCart />
-            </button>
-          </div>
+          {/* <AddToCardBtn id={product._id} /> */}
         </div>
       </div>
     </PhotoProvider>

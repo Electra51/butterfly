@@ -2,25 +2,24 @@
 import { useState } from "react";
 import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
 
-const DetailsImage = ({ dataImage }) => {
-  const [wordData, setWordData] = useState(dataImage[0]);
+const DetailsImage = ({ productImage }) => {
+  const [wordData, setWordData] = useState(productImage[0]);
   const [val, setVal] = useState(0);
   const handleClick = (index) => {
-    // console.log(index);
     setVal(index);
-    const wordSlider = dataImage[index];
+    const wordSlider = productImage[index];
     setWordData(wordSlider);
   };
   const handleNext = () => {
-    let index = val < dataImage.length - 1 ? val + 1 : val;
+    let index = val < productImage.length - 1 ? val + 1 : val;
     setVal(index);
-    const wordSlider = dataImage[index];
+    const wordSlider = productImage[index];
     setWordData(wordSlider);
   };
   const handlePrevious = () => {
-    let index = val <= dataImage.length - 1 && val > 0 ? val - 1 : val;
+    let index = val <= productImage.length - 1 && val > 0 ? val - 1 : val;
     setVal(index);
-    const wordSlider = dataImage[index];
+    const wordSlider = productImage[index];
     setWordData(wordSlider);
   };
   return (
@@ -38,7 +37,7 @@ const DetailsImage = ({ dataImage }) => {
         <MdKeyboardArrowLeft className="text-2xl" />
       </button>
       <div className="flex flex-col">
-        {dataImage.map((data, i) => (
+        {productImage.map((data, i) => (
           <div className="h-20 mt-5 w-24 border border-red-500" key={i}>
             <img
               className={`${

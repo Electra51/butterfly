@@ -1,9 +1,7 @@
-"use client";
-
 import Footer from "@/components/shared/Footer";
 import Navbar from "@/components/shared/Navbar";
 
-function PublicLayout({ children }) {
+function WithLayout({ children }) {
   return (
     <div>
       <Navbar />
@@ -13,4 +11,4 @@ function PublicLayout({ children }) {
   );
 }
 
-export default PublicLayout;
+export default WithLayout;

@@ -5,27 +5,21 @@ import ShopCard from "./ShopCard";
 import { useEffect, useState } from "react";
 import Pagination from "@/components/shared/Pagination";
 
-const ShopProducts = () => {
-  const [shopProducts, setShopProducts] = useState([]);
+const ShopProducts = ({ allProducts }) => {
   const [producType, setProducType] = useState();
-  useEffect(() => {
-    fetch(`http://localhost:5000/products`)
-      .then((res) => res.json())
-      .then((data) => setShopProducts(data));
-  }, []);
+
   const [page, setPage] = useState(0);
-  // console.log(shopProducts);
 
   useEffect(() => {
     let typeArray = [];
-    shopProducts?.map((e, i) => typeArray.push(e?.product_type));
+    allProducts?.map((e, i) => typeArray.push(e?.product_type));
     const removeDuplicate = (typeArray) => {
       return typeArray?.filter(
         (value, index) => typeArray.indexOf(value) === index
       );
     };
     setProducType(removeDuplicate(typeArray));
-  }, [shopProducts]);
+  }, [allProducts]);
 
   return (
     <div className="max-w-7xl mx-auto">
@@ -127,14 +121,14 @@ const ShopProducts = () => {
         </div>
         <div className="col-span-4 border-red-500">
           <div className="grid grid-cols-3 gap-4">
-            {shopProducts
+            {allProducts
               ?.slice(6 * page, 6 * (page + 1))
               .map((product, index) => (
                 <ShopCard product={product} key={index} />
               ))}
           </div>
           <Pagination
-            length={shopProducts?.length}
+            length={allProducts?.length}
             page={page}
             setPage={setPage}
           />

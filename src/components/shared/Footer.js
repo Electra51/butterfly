@@ -2,7 +2,7 @@
 const Footer = () => {
   return (
     <div>
-      <footer className="footer p-10 bg-[#242424] text-white">
+      <footer className="footer p-10 bg-black text-white">
         <nav>
           <header className="footer-title">Services</header>
           <a className="link link-hover">Branding</a>
@@ -27,15 +27,17 @@ const Footer = () => {
           <header className="footer-title">Newsletter</header>
           <fieldset className="form-control w-80">
             <label className="label">
-              <span className="label-text">Enter your email address</span>
+              <span className="label-text text-white">
+                Enter your email address
+              </span>
             </label>
             <div className="relative">
               <input
                 type="text"
                 placeholder="username@site.com"
-                className="input input-bordered w-full pr-16"
+                className="input input-bordered w-full h-10 pr-16 text-black rounded-none"
               />
-              <button className="btn btn-primary absolute top-0 right-0 rounded-l-none">
+              <button className="buttonNLog bNLog absolute top-0 right-0 rounded-none">
                 Subscribe
               </button>
             </div>
@@ -43,7 +45,7 @@ const Footer = () => {
         </form>
       </footer>
 
-      <div className="bg-[#242424] border-t py-4 border-gray-600 flex justify-between items-center text-[14px] px-7">
+      <div className="bg-black border-t py-4 border-gray-600 flex justify-between items-center text-[14px] px-7">
         <div className="flex justify-center items-center gap-10 text-white">
           <p>Services</p>
           <p>Faqs</p>

@@ -6,6 +6,9 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    // fontFamily: {
+    //   montserrat: "--font-montserrat",
+    // },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -21,3 +24,10 @@ module.exports = {
   },
   plugins: [require("daisyui")],
 };
+
+//  apiKey: process.env.NEXT_PUBLIC_apiKey,
+//   authDomain: process.env.NEXT_PUBLIC_authDomain,
+//   projectId: process.env.NEXT_PUBLIC_projectId,
+//   storageBucket: process.env.NEXT_PUBLIC_storageBucket,
+//   messagingSenderId: process.env.NEXT_PUBLIC_messagingSenderId,
+//   appId: process.env.NEXT_PUBLIC_appId,

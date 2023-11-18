@@ -24,7 +24,7 @@ const CompanyLogo = () => {
     cssEase: "linear",
   };
   return (
-    <div className="mx-7">
+    <div className="mx-7 mt-[-42px]">
       <Slider {...settings}>
         <div>
           <div className="h-32 w-32 flex justify-center items-center mt-5 mb-0">

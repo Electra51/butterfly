@@ -38,6 +38,24 @@
   align-items: center;
   transition: 0.8s;
 }
+
+.button7 {
+  height: 40px;
+  width: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.8s;
+}
+.b7 {
+  background: -webkit-linear-gradient(0deg, transparent 50%, white 50%);
+  background-size: 400px 80px;
+  border: 1px solid white;
+}
+.b7:hover {
+  background-position: 200px 0;
+  color: #c2a74e;
+}
 .b1 {
   background: -webkit-linear-gradient(0deg, transparent 50%, black 50%);
   background-size: 400px 80px;
@@ -69,14 +87,10 @@
   color: black;
 }
 .b2 {
-  background: -webkit-linear-gradient(
-    0deg,
-    transparent 50%,
-    rgb(236, 78, 78) 50%
-  );
-  background: rgb(245, 109, 109);
+  background: -webkit-linear-gradient(0deg, transparent 50%, #f35380 50%);
+  background: #f35380;
   background-size: 400px 80px;
-  border: 1px solid rgb(245, 109, 109);
+  border: 1px solid #f35380;
 }
 
 .b2:hover {
@@ -87,6 +101,47 @@ button {
   transition: background 0.6s ease;
 }
 
+.buttonNLog {
+  height: 40px;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.8s;
+  box-shadow: rgb(47 42 42 / 41%) 0px 5px 15px;
+}
+.bNLog {
+  background: #c2a74e;
+  background-size: 316px 80px !important;
+  border: 1px solid #c2a74e;
+}
+.bNLog:hover {
+  background: -webkit-linear-gradient(0deg, transparent 60%, #c2a74e 50%);
+  background-position: 300px 0;
+  color: white;
+}
+
+.buttonNLog1 {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.8s;
+  /* box-shadow: black 0px 5px 15px; */
+}
+.bNLog1 {
+  background: #c2a74e;
+  background-size: 301px 80px !important;
+  border: 1px solid #c2a74e;
+  color: white;
+}
+.bNLog1:hover {
+  background: -webkit-linear-gradient(0deg, transparent 60%, #c2a74e 50%);
+  background-position: 309px 0;
+  color: #c2a74e;
+  font-weight: 600;
+}
 .arrow1 {
   animation: slide1 1s ease-in-out infinite;
 }
@@ -111,11 +166,26 @@ button {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.contactCare {
+  background-image: url(../../../assets/bannerLogo/contact-banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .scroll-to-top {
   border-radius: 50% !important;
   display: flex;
+  color: #c2a74e;
   justify-content: center;
   align-items: center;
   padding: 10px !important;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px !important;
+}
+
+.overlay {
+  background: rgb(219 176 95 / 74%);
+}
+.overlay_2 {
+  inset: 0;
 }

@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "paths": {
+      // src er vetor theke import kore dey @/ dile
       "@/*": ["./src/*"]
     }
   }

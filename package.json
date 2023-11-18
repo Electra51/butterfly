@@ -9,13 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "firebase": "^10.6.0",
+    "jose": "^5.1.0",
     "lightbox.js-react": "^0.9.5",
+    "mongodb": "^6.2.0",
     "next": "14.0.0",
+    "next-auth": "^4.24.4",
     "pure-react-carousel": "^1.30.1",
     "react": "^18",
     "react-dom": "^18",
+    "react-hook-form": "^7.48.2",
+    "react-hot-toast": "^2.4.1",
     "react-icons": "^4.11.0",
     "react-image-lightbox": "^5.1.4",
+    "react-loader-spinner": "^5.4.5",
     "react-photo-album": "^2.3.0",
     "react-photo-view": "^1.2.3",
     "react-responsive-carousel": "^3.2.23",
@@ -23,8 +30,10 @@
     "react-slick": "^0.29.0",
     "react-sweetalert2": "^0.6.0",
     "react-tabs": "^6.0.2",
+    "server-only": "^0.0.1",
     "slick-carousel": "^1.8.1",
-    "swiper": "^11.0.3"
+    "swiper": "^11.0.3",
+    "swr": "^2.2.4"
   },
   "devDependencies": {
     "autoprefixer": "^10",

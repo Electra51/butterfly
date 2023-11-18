@@ -7,7 +7,7 @@ const PricingPlan = () => {
     <div className="mt-32 max-w-6xl mx-auto">
       <SectionTitle heading={"Our Pricing"} />
       <div className="grid grid-cols-3 gap-3 justify-center justify-items-center items-center my-12">
-        <div className="flex flex-col justify-center items-center bg-gray-300 shadow-md w-[300px] px-5 py-8">
+        <div className="flex flex-col justify-center items-center bg-[#c2a74e] shadow-md w-[300px] px-5 py-8">
           <p className="text-xl font-semibold">Comfort Relax</p>
           <p className=" mt-5 mb-3">
             <span className="text-2xl font-bold text-pink-700 ">$29.99</span> /
@@ -52,7 +52,7 @@ const PricingPlan = () => {
           </button>
         </div>
         {/* 2 */}
-        <div className="flex flex-col justify-center items-center bg-gray-300 shadow-md w-[300px] px-5 py-8">
+        <div className="flex flex-col justify-center items-center bg-[#c2a74e] shadow-md w-[300px] px-5 py-8">
           <p className="text-xl font-semibold">Premium Spa</p>
           <p className=" mt-5 mb-3">
             <span className="text-2xl font-bold text-violet-700 ">$39.99</span>{" "}
@@ -98,7 +98,7 @@ const PricingPlan = () => {
           </button>
         </div>
         {/* 3 */}
-        <div className="flex flex-col justify-center items-center bg-gray-300 shadow-md w-[300px] px-5 py-8">
+        <div className="flex flex-col justify-center items-center bg-[#c2a74e] shadow-md w-[300px] px-5 py-8">
           <p className="text-xl font-semibold">Luxury Retreat</p>
           <p className=" mt-5 mb-3">
             <span className="text-2xl font-bold text-yellow-600 ">$49.99</span>{" "}

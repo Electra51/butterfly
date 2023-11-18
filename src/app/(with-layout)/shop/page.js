@@ -1,7 +1,11 @@
 import BreadCrumb from "@/components/shared/BreadCrumb";
+import FeaturedProducts from "@/components/ui/HomePageUI/FeaturedProducts";
 import ShopProducts from "@/components/ui/ShopPageUI/ShopProducts";
+import getProducts from "@/utils/getProducts";
 
-const ShopPage = () => {
+const ShopPage = async () => {
+  const allProducts = await getProducts();
+  console.log("object", allProducts);
   return (
     <div>
       <div
@@ -19,7 +23,8 @@ const ShopPage = () => {
           </div>
         </div>
       </div>
-      <ShopProducts />
+      <ShopProducts allProducts={allProducts} />
+      {<FeaturedProducts products={allProducts} />}
     </div>
   );
 };

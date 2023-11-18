@@ -1,7 +1,9 @@
 import BreadCrumb from "@/components/shared/BreadCrumb";
 import ServicePageUI from "@/components/ui/ServicePageUI/ServicePageUI";
+import getServices from "@/utils/getServices";
 
-const ServicesPage = () => {
+const ServicesPage = async () => {
+  const allService = await getServices();
   return (
     <div>
       <div
@@ -21,7 +23,7 @@ const ServicesPage = () => {
           </div>
         </div>
       </div>
-      <ServicePageUI />
+      <ServicePageUI allService={allService} />
     </div>
   );
 };

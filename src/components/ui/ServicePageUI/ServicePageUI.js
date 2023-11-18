@@ -3,24 +3,24 @@ import { useEffect, useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import ServiceCard from "./ServiceCard";
-const ServicePageUI = () => {
+const ServicePageUI = ({ allService }) => {
   const [toggleState, setToggleState] = useState(1);
   const toggleTab = (index) => {
     setToggleState(index);
   };
-  const [shopServices, setShopServices] = useState([]);
-  useEffect(() => {
-    fetch(`http://localhost:5000/services`)
-      .then((res) => res.json())
-      .then((data) => setShopServices(data));
-  }, []);
-  const Hair = shopServices?.filter((item) => item.category === "Hair");
-  const Nail = shopServices?.filter((item) => item.category === "Nail");
-  const Therapy = shopServices?.filter(
+  // const [shopServices, setShopServices] = useState([]);
+  // useEffect(() => {
+  //   fetch(`http://localhost:5000/services`)
+  //     .then((res) => res.json())
+  //     .then((data) => setShopServices(data));
+  // }, []);
+  const Hair = allService?.filter((item) => item.category === "Hair");
+  const Nail = allService?.filter((item) => item.category === "Nail");
+  const Therapy = allService?.filter(
     (item) => item.category === "Spa & Therapy"
   );
   return (
-    <div className="max-w-7xl mx-auto mt-10">
+    <div className="max-w-6xl mx-auto mt-10">
       {/* tab */}
       <div className="flex justify-center items-center gap-5">
         <div
@@ -70,14 +70,14 @@ const ServicePageUI = () => {
 
       <div className={toggleState == 1 ? "text-gray-900" : "hidden"}>
         {" "}
-        <div className="grid grid-cols-3 gap-3 my-7 justify-items-center">
-          {shopServices?.map((e, i) => (
+        <div className="grid grid-cols-4 gap-7 my-7 justify-items-center">
+          {allService?.map((e, i) => (
             <ServiceCard item={e} key={i} />
           ))}
         </div>
       </div>
       <div className={toggleState == 2 ? "text-gray-900" : "hidden"}>
-        <div className="grid grid-cols-3 gap-3 my-7 justify-items-center">
+        <div className="grid grid-cols-4 gap-7 my-7 justify-items-center">
           {Hair?.map((e, i) => (
             <ServiceCard item={e} key={i} />
           ))}
@@ -90,7 +90,7 @@ const ServicePageUI = () => {
             : "hidden"
         }
       >
-        <div className="grid grid-cols-3 gap-3 my-7 justify-items-center">
+        <div className="grid grid-cols-4 gap-7 my-7 justify-items-center">
           {Nail?.map((e, i) => (
             <ServiceCard item={e} key={i} />
           ))}
@@ -103,7 +103,7 @@ const ServicePageUI = () => {
             : "hidden"
         }
       >
-        <div className="grid grid-cols-3 gap-3 my-7 justify-items-center">
+        <div className="grid grid-cols-4 gap-3 my-7 justify-items-center">
           {Therapy?.map((e, i) => (
             <ServiceCard item={e} key={i} />
           ))}
