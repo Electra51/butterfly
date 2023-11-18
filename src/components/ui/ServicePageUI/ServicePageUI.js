@@ -14,18 +14,6 @@ const ServicePageUI = ({ allService }) => {
   const [filteredServices, setFilteredServices] = useState(allService);
   const [ratingFilter, setRatingFilter] = useState("all");
 
-  // const handleSearch = (e) => {
-  //   const query = e.target.value.toLowerCase();
-  //   setSearchQuery(query);
-  //   console.log("query", query);
-  //   // Filter the services based on the search query
-  //   const filtered = allService?.filter((service) =>
-  //     service?.name?.toLowerCase().includes(query)
-  //   );
-  //   setFilteredServices(filtered);
-
-  //   // setData(filtered);
-  // };
   useEffect(() => {
     const filtered = allService?.filter((service) => {
       const matchesSearch = service?.name?.toLowerCase().includes(searchQuery);
@@ -55,7 +43,7 @@ const ServicePageUI = ({ allService }) => {
     const selectedRating = e.target.value;
     setRatingFilter(selectedRating);
   };
-  // console.log("filteredServices", filteredServices);
+
   const Hair = filteredServices?.filter((item) => item.category === "Hair");
   const Nail = filteredServices?.filter((item) => item.category === "Nail");
   const Therapy = filteredServices?.filter(

@@ -24,7 +24,6 @@ const ShopPage = async () => {
         </div>
       </div>
       <ShopProducts allProducts={allProducts} />
-      {<FeaturedProducts products={allProducts} />}
     </div>
   );
 };

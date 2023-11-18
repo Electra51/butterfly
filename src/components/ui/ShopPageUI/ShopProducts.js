@@ -4,134 +4,134 @@ import SectionTitle from "@/components/shared/SectionTitle";
 import ShopCard from "./ShopCard";
 import { useEffect, useState } from "react";
 import Pagination from "@/components/shared/Pagination";
+import { IoMdSearch } from "react-icons/io";
+import { RxShadowNone } from "react-icons/rx";
 
 const ShopProducts = ({ allProducts }) => {
-  const [producType, setProducType] = useState();
+  console.log("object", allProducts);
 
+  const [priceFilter, setPriceFilter] = useState("all");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [stockFilter, setStockFilter] = useState("all");
+  const [typeFilter, setTypeFilter] = useState("all");
   const [page, setPage] = useState(0);
 
-  useEffect(() => {
-    let typeArray = [];
-    allProducts?.map((e, i) => typeArray.push(e?.product_type));
-    const removeDuplicate = (typeArray) => {
-      return typeArray?.filter(
-        (value, index) => typeArray.indexOf(value) === index
-      );
-    };
-    setProducType(removeDuplicate(typeArray));
-  }, [allProducts]);
+  const productTypes = Array.from(
+    new Set(allProducts?.map((e) => e?.product_type))
+  );
+
+  const filteredProducts = allProducts
+    ?.filter((product) => {
+      // Filter by search query
+      const matchesSearch = product?.name
+        .toLowerCase()
+        .includes(searchQuery.toLowerCase());
+
+      // Filter by price
+      const matchesPrice =
+        priceFilter === "all" || product?.price <= parseInt(priceFilter);
+
+      // Filter by stock status
+      const matchesStock =
+        stockFilter === "all" ||
+        (stockFilter === "inStock" && product?.stock == "In Stock") ||
+        (stockFilter === "outOfStock" && product?.stock == "Out of Stock");
+
+      // Filter by product type
+      const matchesType =
+        typeFilter === "all" || product?.product_type === typeFilter;
+
+      return matchesSearch && matchesPrice && matchesStock && matchesType;
+    })
+    .slice(6 * page, 6 * (page + 1));
 
   return (
-    <div className="max-w-7xl mx-auto">
-      <div className="mt-32">
-        <SectionTitle heading={"Our Products"} />
+    <div className="max-w-6xl mx-auto">
+      <div className="flex items-center justify-between mt-28 mb-5">
+        <div className="relative flex items-center h-9 mr-2 bg-white overflow-hidden border border-[#C2A74E]">
+          <div className="grid place-items-center h-full w-12 text-gray-300">
+            <IoMdSearch className="text-[#C2A74E] font-medium text-xl" />
+          </div>
+
+          <input
+            className="peer h-full w-full outline-none text-sm text-[#C2A74E] pr-2"
+            type="text"
+            id="search"
+            onChange={(e) => {
+              setSearchQuery(e.target.value);
+              setPage(0); // Reset page when the search query changes
+            }}
+            placeholder="Search Service.."
+          />
+        </div>
+        <Pagination
+          length={allProducts?.length}
+          page={page}
+          setPage={setPage}
+        />
       </div>
-      <div className="grid grid-cols-5 gap-10">
-        <div className=" border">
-          <div className="relative flex items-center w-full h-12 mr-2 focus-within:shadow-lg bg-white overflow-hidden">
-            <div className="grid place-items-center h-full w-12 text-gray-300">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                />
-              </svg>
-            </div>
-
-            <input
-              className="peer h-full w-full outline-none text-sm text-gray-700 pr-2"
-              type="text"
-              id="search"
-              placeholder="Search something.."
-            />
-          </div>
-
+      <div className="grid grid-cols-5 gap-12">
+        <div>
           {/* price filter */}
-          <p className="mb-1">Filter by Price :</p>
-          <div className="flex flex-row items-center">
-            <input
-              className="input w-28 mr-1 input-bordered p-1 my-0 h-6"
-              type="number"
-              placeholder="Min Price"
-              // value={minPrice}
-              // onChange={(e) => setMinPrice(e.target.value)}
-            />
-            <span className="mr-1">To</span>
-            <input
-              className="input w-28 mr-1 input-bordered p-1 my-0 h-6"
-              type="number"
-              placeholder="Max Price"
-              // value={maxPrice}
-              // onChange={(e) => setMaxPrice(e.target.value)}
-            />
-
-            <button
-              className={`bg-[#EF8E33] mr-1 hover:bg-[#bf680a] text-[14px] text-white !px-2 py-0.5 rounded-none`}
-              // onClick={handleFilter}
+          <div className="flex flex-col justify-start h-12">
+            <p className="mb-0 pb-0">Filter by Price :</p>
+            <select
+              id=""
+              name=""
+              className="border border-[#C2A74E] rounded-none"
+              value={priceFilter}
+              onChange={(e) => setPriceFilter(e.target.value)}
             >
-              Filter
-            </button>
-            <button
-              className={`bg-[#EF8E33] mr-1 hover:bg-[#bf680a] text-[14px] text-white !px-2 py-0.5 rounded-none`}
-              // onClick={handleReset}
+              <option value="all">All</option>
+              <option value="40">Less Than 40</option>
+              <option value="20">Less Than 20</option>
+              <option value="10">Less Than 10</option>
+            </select>
+          </div>
+          <div className="flex flex-col justify-start h-12 mt-5">
+            <p className="mb-0 pb-0">Filter by Stock :</p>
+            <select
+              id=""
+              name=""
+              value={stockFilter}
+              onChange={(e) => setStockFilter(e.target.value)}
+              className="border border-[#C2A74E] rounded-none"
             >
-              Reset
-            </button>
+              <option value="all">All</option>
+              <option value="inStock">In Stock</option>
+              <option value="outOfStock">Out Of Stock</option>
+            </select>
           </div>
-          {/* price filter end */}
-          <div>
-            <p>Stock</p>
-            <div className="flex items-center gap-3">
-              <input
-                type="radio"
-                name="radio-2"
-                className="radio radio-primary"
-              />
-              In Stock{" "}
-            </div>
-            <div className="flex items-center gap-3">
-              <input
-                type="radio"
-                name="radio-2"
-                className="radio radio-primary"
-              />
-              Out of Stock{" "}
-            </div>
-          </div>
-          {/* product type */}
-
-          <div>
+          <div className="mt-3">
             <p>Product Type</p>
-            <div className="flex w-32 flex-wrap gap-2">
-              {producType?.map((e, index) => (
-                <div className="badge badge-primary" key={index}>
-                  {e}
+            <div className="flex flex-wrap gap-2 justify-stretch items-center">
+              {productTypes?.map((type, index) => (
+                <div
+                  className={`px-2 py-1 rounded-full text-black border border-[#C2A74E] cursor-pointer text-[12px] ${
+                    typeFilter === type ? "bg-[#C2A74E] text-white" : "bg-white"
+                  }`}
+                  onClick={() => setTypeFilter(type)}
+                  key={index}
+                >
+                  {type}
                 </div>
               ))}
             </div>
           </div>
         </div>
-        <div className="col-span-4 border-red-500">
-          <div className="grid grid-cols-3 gap-4">
-            {allProducts
-              ?.slice(6 * page, 6 * (page + 1))
-              .map((product, index) => (
+        <div className="col-span-4 border-red-500 max-w-4xl mx-auto mb-8">
+          {filteredProducts.length > 0 ? (
+            <div className="grid grid-cols-3 gap-14 mt-1">
+              {filteredProducts.map((product, index) => (
                 <ShopCard product={product} key={index} />
               ))}
-          </div>
-          <Pagination
-            length={allProducts?.length}
-            page={page}
-            setPage={setPage}
-          />
+            </div>
+          ) : (
+            <p className="text-red-500 text-xl flex flex-col justify-center items-center my-20  gap-4">
+              <RxShadowNone />
+              No products found with the current filters and search criteria.
+            </p>
+          )}
         </div>
       </div>
     </div>
