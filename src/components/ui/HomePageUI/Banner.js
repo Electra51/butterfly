@@ -12,6 +12,7 @@ import img7 from "../../../assets/bannerLogo/image08.png";
 import { BsArrowRightShort } from "react-icons/bs";
 import Image from "next/image";
 import "./button.css";
+import Link from "next/link";
 
 const Banner = () => {
   return (
@@ -111,10 +112,12 @@ const Banner = () => {
             <p className="font-bold text-3xl mt-3 tracking-[0.1rem] text-[#100C08]">
               SPA TREATMENT
             </p>
-
-            <button className="button6 b1 mt-7 text-[#100C08]">
-              Shop Now <BsArrowRightShort className="arrow1 text-2xl" />
-            </button>
+            <Link href="/shop">
+              {" "}
+              <button className="button6 b1 mt-7 text-[#100C08]">
+                Shop Now <BsArrowRightShort className="arrow1 text-2xl" />
+              </button>
+            </Link>
           </div>
         </div>
       </div>

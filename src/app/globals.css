@@ -20,3 +20,20 @@ select:focus,
 .input:focus {
   outline: none;
 }
+.buttonCart {
+  height: 40px;
+  width: 160px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.8s;
+}
+.bCart {
+  background: -webkit-linear-gradient(0deg, transparent 50%, #c2a74e 50%);
+  background-size: 400px 80px;
+  border: 1px solid #c2a74e;
+}
+.bCart:hover {
+  background-position: 200px 0;
+  color: black;
+}

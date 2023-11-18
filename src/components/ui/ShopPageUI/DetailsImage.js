@@ -38,7 +38,7 @@ const DetailsImage = ({ productImage }) => {
       </button>
       <div className="flex flex-col">
         {productImage.map((data, i) => (
-          <div className="h-20 mt-5 w-24 border border-red-500" key={i}>
+          <div className="h-20 mt-5 w-24 border border-[#c2a74e]" key={i}>
             <img
               className={`${
                 wordData.id == i ? "clicked" : ""
