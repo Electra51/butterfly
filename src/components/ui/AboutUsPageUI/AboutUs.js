@@ -10,7 +10,7 @@ const AboutUs = () => {
         <Image src={imgAbout} alt="about Image" priority />
       </div>
       <div>
-        <p className="tracking-[0.2rem] text-xl border-b ">About us</p>
+        <p className="tracking-[0.2rem] text-xl border-b font-bold">About us</p>
         <p className="text-justify tracking-[0.01rem] mt-5">
           The top three occupations in the Beauty salons Industry Group are
           Hairdressers, hairstylists, & cosmetologists, Manicurists and

@@ -3,11 +3,14 @@
 import Image from "next/image";
 import productLogo from "../../../assets/bannerLogo/productsLogo.jpg";
 import { BsArrowRightShort } from "react-icons/bs";
+import Link from "next/link";
 const OurProduct = () => {
   return (
     <div className="mt-32 grid grid-cols-2 gap-10 items-center max-w-6xl mx-auto my-20">
       <div>
-        <p className="tracking-[0.2rem] text-xl border-b">Our Products</p>
+        <p className="tracking-[0.2rem] text-xl border-b font-bold">
+          Our Products
+        </p>
         <p className="text-justify tracking-[0.01rem] mt-5">
           All our products are cruelty-free, it’s a category containing all
           cosmetics that have not been tested on animals. Each cosmetic is
@@ -17,9 +20,11 @@ const OurProduct = () => {
           American Anti-Vivisection Society, Animal Alliance of Canada, Doris
           Day Animal League, etc.
         </p>
-        <button className="button b1 mt-10">
-          Shop Now <BsArrowRightShort className="arrow1 text-2xl" />
-        </button>
+        <Link href="/shop">
+          <button className="button b1 mt-10">
+            Shop Now <BsArrowRightShort className="arrow1 text-2xl" />
+          </button>
+        </Link>
       </div>
       <div>
         {" "}
