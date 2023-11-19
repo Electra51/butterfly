@@ -66,6 +66,8 @@ const ContactUs = () => {
         className="absolute top-[-35px] right-0 w-[40%] bg-[#C2A74E]"
         style={{ boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }}
       >
+        {" "}
+        {/* <div id="triangle-bottomleft absolute bottom-5 left-5"></div>{" "} */}
         <form onSubmit={handleSubmit(onSubmit)} className="px-10 py-10">
           <div className="form-control">
             <label htmlFor="email" className="label label-text">

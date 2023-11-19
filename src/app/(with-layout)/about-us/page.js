@@ -3,6 +3,7 @@ import AboutUs from "@/components/ui/AboutUsPageUI/AboutUs";
 import OurProduct from "@/components/ui/AboutUsPageUI/OurProduct";
 import OurTeam from "@/components/ui/AboutUsPageUI/OurTeam";
 import VideoPage from "@/components/ui/AboutUsPageUI/VideoPage";
+import OurCare from "@/components/ui/HomePageUI/OurCare";
 
 const aboutPage = () => {
   return (
@@ -27,6 +28,7 @@ const aboutPage = () => {
       <AboutUs />
       <OurTeam />
       <VideoPage />
+      <OurCare />
       <OurProduct />
     </div>
   );
