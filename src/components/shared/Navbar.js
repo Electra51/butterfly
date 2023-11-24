@@ -3,18 +3,22 @@
 import Image from "next/image";
 import logo from "../../assets/logo/new.png";
 import { AiOutlineSearch, AiOutlineUser } from "react-icons/ai";
-import { useEffect, useMemo, useState } from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import NavLink from "./NavLink";
 import useAuth from "@/hooks/useAuth";
 import toast from "react-hot-toast";
 import { usePathname, useRouter } from "next/navigation";
-import useCart from "@/hooks/useCart";
+import { FaRegHeart } from "react-icons/fa";
 import "./navbar.css";
-
+import CartContext from "@/contexts/CartContext";
+import { AiOutlineShoppingCart } from "react-icons/ai";
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
   const [toggole, setToggole] = useState(false);
+
+  const { cart } = useContext(CartContext);
+  const cartItems = cart?.cartItems;
   const toggleHandle = () => {
     setToggole(!toggole);
   };
@@ -25,11 +29,6 @@ const Navbar = () => {
   const path = usePathname();
 
   const [navToggle, setNavToggle] = useState(false);
-  const { cart } = useCart();
-  const total = useMemo(
-    () => cart.reduce((pre, cur) => cur.price * cur.quantity + pre, 0),
-    [cart]
-  );
 
   const handleLogout = async () => {
     const toastId = toast.loading("Loading...");
@@ -71,6 +70,14 @@ const Navbar = () => {
     };
   }, []);
 
+  const amountWithoutTax = cartItems?.reduce(
+    (acc, item) => acc + item.quantity * item.price,
+    0
+  );
+
+  const taxAmount = (amountWithoutTax * 0.15).toFixed(2);
+
+  const totalAmount = (Number(amountWithoutTax) + Number(taxAmount)).toFixed(2);
   const navData = [
     {
       path: "/",
@@ -132,61 +139,75 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        {toggole && (
-          <div className="absolute top-14 right-0">
-            <div className="relative flex items-center w-full h-12 mr-2 focus-within:shadow-lg bg-white overflow-hidden">
-              <div className="grid place-items-center h-full w-12 text-gray-300">
-                <AiOutlineSearch className="" />
-              </div>
+        {/* <FaRegHeart className="cursor-pointer text-xl" /> */}
+        <div className="indicator">
+          <FaRegHeart className="cursor-pointer text-[22px] font-medium" />
+          <span className="badge badge-sm indicator-item bg-red-500 text-white dark:text-gray-300">
+            60
+          </span>
+        </div>
 
-              <input
-                className="peer h-full w-full outline-none text-sm text-gray-700 pr-2"
-                type="text"
-                id="search"
-                placeholder="Search something.."
-              />
-            </div>
-          </div>
-        )}
-        <AiOutlineSearch
-          onClick={toggleHandle}
-          className="cursor-pointer text-2xl"
-        />
-        <div className="dropdown-end dropdown lg:mr-2">
-          <label tabIndex={0} className="btn-ghost btn-circle btn">
+        <div className="dropdown-end dropdown lg:mr-2 mt-2 px-2">
+          <label tabIndex={0} className="mx-2 mt-1">
             <div className="indicator">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                />
-              </svg>
-              <span className="badge badge-sm indicator-item bg-primary text-white dark:text-gray-300">
-                {cart.length}
-              </span>
+              <AiOutlineShoppingCart className="cursor-pointer text-[22px] font-medium" />
+              {cartItems?.length > 0 && (
+                <span className="badge badge-sm indicator-item bg-red-500 text-white dark:text-gray-300">
+                  {cartItems?.length}
+                </span>
+              )}
             </div>
           </label>
           <div
             tabIndex={0}
-            className="card dropdown-content card-compact mt-3 w-52 bg-base-100 shadow"
+            className="dropdown-content card-compact mt-3 w-72 bg-base-100 relative"
+            style={{ boxShadow: "rgb(193 165 73 / 44%) 0px 7px 29px 0px" }}
           >
-            <div className="card-body">
-              <span className="text-lg font-bold">
-                {cart.length}
-                Items
+            <div className="card-body overflow-hidden h-96">
+              <span className="text-[16px] font-bold text-black text-center border-b">
+                Total {cartItems?.length} Items in Cart
               </span>
-              <span className="text-info">Total: ${total.toFixed(2)}</span>
-              <div className="card-actions">
-                <Link href="/checkout" className="block w-full">
-                  <button className="btn-primary btn-block btn">
+              <div className="overflow-y-auto h-64">
+                {cartItems?.length > 0 ? (
+                  <>
+                    {" "}
+                    {cartItems?.map((e, i) => {
+                      console.log("e", e);
+                      return (
+                        <div
+                          key={i}
+                          className="grid grid-cols-4 gap-2 border-b py-1"
+                        >
+                          <div>
+                            <Image src={e?.img} alt="" width={50} height={30} />
+                          </div>
+                          <div className="text-black col-span-3">
+                            <p className="text-[12px] font-medium">{e?.name}</p>
+                            <p className="text-[12px]">Price: ${e?.price}</p>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </>
+                ) : (
+                  <p className="text-black text-center font-medium mt-24 text-xl">
+                    No item in your cart ...
+                  </p>
+                )}
+              </div>
+
+              <div className="card-action absolute bottom-2 right-4 left-4">
+                {cartItems?.length < 0 ? (
+                  ""
+                ) : (
+                  <div className="flex justify-center items-center w-24 ml-20 pb-2 text-[16px] font-bold text-black">
+                    <p>Total:</p>
+                    <p className="text-left mr-auto">${totalAmount}</p>
+                  </div>
+                )}
+
+                <Link href="/cart" className="block w-full">
+                  <button className="bg-[#C2A74E] px-2 py-1 w-full">
                     View cart
                   </button>
                 </Link>

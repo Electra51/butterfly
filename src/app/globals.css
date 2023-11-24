@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -43,4 +44,15 @@ select:focus,
   height: 0;
   border-bottom: 100px solid red;
   border-right: 100px solid transparent;
+}
+
+div:where(.swal2-container).swal2-top-end > .swal2-popup,
+div:where(.swal2-container).swal2-top-right > .swal2-popup {
+  grid-column: 3;
+  place-self: start end;
+  border-radius: 0px !important;
+}
+
+.swal2-shown {
+  border-radius: 0px !important;
 }

@@ -1,15 +1,37 @@
 "use client";
-import AddToCardBtn from "@/components/shared/AddToCardBtn";
+
 import Star from "@/components/shared/Star";
+import Swal from "sweetalert2";
 import Image from "next/image";
 import Link from "next/link";
+import { useContext } from "react";
+import CartContext from "@/contexts/CartContext";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { FaRegEye, FaRegHeart, FaStar } from "react-icons/fa";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 import "react-photo-view/dist/react-photo-view.css";
 const ShopCard = ({ product }) => {
-  // console.log("product", product.img[0].img1st);
+  const { addItemToCart, cart } = useContext(CartContext);
+  console.log("product", cart.cartItems);
 
+  const inStock = product?.stock >= 1;
+  const addToCardHandler = () => {
+    addItemToCart({
+      product: product._id,
+      name: product?.name,
+      img: product.img[0].img1st,
+      stock: product?.stock,
+      rating: product?.rating,
+      price: product?.price,
+    });
+    // Swal.fire({
+    //   position: "top-end",
+    //   icon: "success",
+    //   title: `added to your cart`,
+    //   showConfirmButton: false,
+    //   timer: 1500,
+    // });
+  };
   return (
     <PhotoProvider>
       <div
@@ -27,11 +49,11 @@ const ShopCard = ({ product }) => {
           className="invisible group-hover:visible absolute bottom-[50%] left-2"
           style={{ zIndex: 1 }}
         >
-          <div className="bg-[#c2a74e] text-white p-2">
-            <Link href={`/services/${product._id}`}>
-              <AiOutlineShoppingCart />
-            </Link>
-          </div>
+          <button className="bg-[#c2a74e] text-white p-2" disabled={!inStock}>
+            {/* <Link href={`/services/${product._id}`}> */}
+            <AiOutlineShoppingCart onClick={addToCardHandler} />
+            {/* </Link> */}
+          </button>
 
           <div className="bg-[#c2a74e] text-white p-2 mt-1">
             {/* <FaHeart /> */}
@@ -70,13 +92,14 @@ const ShopCard = ({ product }) => {
               <p className="font-semibold text-[#aa9d28fd] text-[14px]">
                 Price: $ {product?.price}
               </p>
-              {product?.stock == "Out of Stock" ? (
+
+              {!inStock ? (
                 <div className="badge bg-red-600 text-white text-[12px]">
-                  {product?.stock}
+                  Out of Stock
                 </div>
               ) : (
                 <div className="badge bg-green-600 text-white text-[11px]">
-                  {product?.stock}
+                  In Stock
                 </div>
               )}
             </div>
