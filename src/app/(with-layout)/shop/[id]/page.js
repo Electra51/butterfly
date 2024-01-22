@@ -1,4 +1,3 @@
-import AddToCardBtn from "@/components/shared/AddToCardBtn";
 import BreadCrumb2 from "@/components/shared/BreadCrumb2";
 import Star from "@/components/shared/Star";
 import DetailsImage from "@/components/ui/ShopPageUI/DetailsImage";
@@ -20,8 +19,7 @@ const ShopDetails = async ({ params: { id } }) => {
         style={{
           backgroundImage:
             "url(https://i.ibb.co/fMkCHHB/istockphoto-1316127257-612x612.jpg)",
-        }}
-      >
+        }}>
         <div className="hero-overlay bg-opacity-40"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-lg backdrop-blur-sm bg-white bg-opacity-50 px-28 py-5">
@@ -38,8 +36,7 @@ const ShopDetails = async ({ params: { id } }) => {
           <div className="flex justify-center items-center mt-14 gap-5">
             <Link
               href=""
-              className="flex items-center cursor-pointer border border-gray-700 px-2 py-1 buttonBuy bBuy"
-            >
+              className="flex items-center cursor-pointer border border-gray-700 px-2 py-1 buttonBuy bBuy">
               <p className="text-[14px]">Buy Now</p>
             </Link>
             <button className="buttonCart bCart text-[#c2a74e]">
@@ -83,8 +80,7 @@ const ShopDetails = async ({ params: { id } }) => {
             {product?.tag_list?.map((e, i) => (
               <div
                 className="bg-[#c2a74e] px-3 py-0 rounded-full text-[14px]"
-                key={i}
-              >
+                key={i}>
                 {e}
               </div>
             ))}

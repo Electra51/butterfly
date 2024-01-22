@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import logo from "../../assets/logo/new.png";
-import { AiOutlineSearch, AiOutlineUser } from "react-icons/ai";
-import { useContext, useEffect, useMemo, useState } from "react";
+import { AiOutlineUser } from "react-icons/ai";
+import { useContext, useEffect, useState } from "react";
 import Link from "next/link";
 import NavLink from "./NavLink";
 import useAuth from "@/hooks/useAuth";
@@ -13,6 +13,8 @@ import { FaRegHeart } from "react-icons/fa";
 import "./navbar.css";
 import CartContext from "@/contexts/CartContext";
 import { AiOutlineShoppingCart } from "react-icons/ai";
+import { CgProfile } from "react-icons/cg";
+import { MdOutlineLogout } from "react-icons/md";
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
   const [toggole, setToggole] = useState(false);
@@ -108,8 +110,7 @@ const Navbar = () => {
       }}
       className={`navbar fixed top-0 z-10 ${
         navbar ? "bg-black shadow-lg" : "bg-black bg-opacity-5"
-      } text-white lg:pr-3`}
-    >
+      } text-white lg:pr-3`}>
       <div className="flex-1">
         <Link href="/">
           <Image src={logo} alt="logo" width={140} priority />
@@ -118,8 +119,7 @@ const Navbar = () => {
       <div
         className={`absolute ${
           navToggle ? "left-0" : "left-[-120%]"
-        } top-[4.5rem] flex w-full flex-col bg-slate-200 pb-3 pt-2 transition-all duration-300 lg:static lg:w-[unset] lg:flex-row lg:bg-transparent lg:pb-0 lg:pt-0`}
-      >
+        } top-[4.5rem] flex w-full flex-col bg-slate-200 pb-3 pt-2 transition-all duration-300 lg:static lg:w-[unset] lg:flex-row lg:bg-transparent lg:pb-0 lg:pt-0`}>
         <ul className="flex flex-col px-1 gap-5 lg:flex-row mr-3">
           {navData.map(({ path, title }) => (
             <li key={path} className={`mx-auto text-white text-[15px]`}>
@@ -132,8 +132,7 @@ const Navbar = () => {
                     ? "font-bold text-[#C2A74E]"
                     : "font-bold text-[#C2A74E]"
                 }`}
-                exact={path === "/"}
-              >
+                exact={path === "/"}>
                 {title}
               </NavLink>
             </li>
@@ -161,8 +160,7 @@ const Navbar = () => {
           <div
             tabIndex={0}
             className="dropdown-content card-compact mt-3 w-72 bg-base-100 relative"
-            style={{ boxShadow: "rgb(193 165 73 / 44%) 0px 7px 29px 0px" }}
-          >
+            style={{ boxShadow: "rgb(193 165 73 / 44%) 0px 7px 29px 0px" }}>
             <div className="card-body overflow-hidden h-96">
               <span className="text-[16px] font-bold text-black text-center border-b">
                 Total {cartItems?.length} Items in Cart
@@ -176,8 +174,7 @@ const Navbar = () => {
                       return (
                         <div
                           key={i}
-                          className="grid grid-cols-4 gap-2 border-b py-1"
-                        >
+                          className="grid grid-cols-4 gap-2 border-b py-1">
                           <div>
                             <Image src={e?.img} alt="" width={50} height={30} />
                           </div>
@@ -234,27 +231,24 @@ const Navbar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu-compact dropdown-content menu rounded-box mt-3 w-52 bg-base-100 p-2 shadow"
-            >
+              className="menu-compact dropdown-content menu rounded-none mt-3 w-48 bg-base-100 p-2 shadow">
               <li className="mb-2 mt-1 text-center font-semibold">
                 {displayName}
               </li>
               <div className="divider my-0"></div>
-              <li className="mb-2">
+              <li className="mb-2 mx-auto">
                 <NavLink
                   href="/profile"
-                  className="text-lg"
-                  activeClassName="text-blue-500"
-                >
-                  Profile
+                  className="button7 b7  text-white rounded-none"
+                  activeClassName="text-blue-500">
+                  <CgProfile className="text-[18px]" /> Profile
                 </NavLink>
               </li>
-              <li className="">
+              <li className="mx-auto">
                 <button
                   onClick={handleLogout}
-                  className="btn-warning btn content-center text-white"
-                >
-                  Logout
+                  className="buttonNLog bNLog w-full text-white rounded-none">
+                  <MdOutlineLogout className="text-[18px]" /> Logout
                 </button>
               </li>
             </ul>
@@ -262,8 +256,7 @@ const Navbar = () => {
         ) : (
           <Link
             href="/login"
-            className="flex items-center cursor-pointer border border-gray-700 px-2 py-1 buttonNLog bNLog"
-          >
+            className="flex items-center cursor-pointer border border-gray-700 px-2 py-1 buttonNLog bNLog">
             <AiOutlineUser />
             <p className="text-[14px]">Login/Register</p>
           </Link>
@@ -280,8 +273,7 @@ const Navbar = () => {
           xmlns="http://www.w3.org/2000/svg"
           width="32"
           height="32"
-          viewBox="0 0 512 512"
-        >
+          viewBox="0 0 512 512">
           <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
         </svg>
         <svg
@@ -289,8 +281,7 @@ const Navbar = () => {
           xmlns="http://www.w3.org/2000/svg"
           width="32"
           height="32"
-          viewBox="0 0 512 512"
-        >
+          viewBox="0 0 512 512">
           <polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
         </svg>
       </label>
