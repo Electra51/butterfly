@@ -18,7 +18,7 @@ const ImageGallery = () => {
     { src: "/images/images9.jpg", width: 1080, height: 720 },
   ];
   return (
-    <div className="mt-32 max-w-6xl mx-auto">
+    <div className="mt-32 max-w-[20rem] lg:max-w-6xl mx-auto">
       <SectionTitle heading={"Image Gallery"} />
       <div className="mt-12">
         <PhotoAlbum layout="columns" photos={photos} />

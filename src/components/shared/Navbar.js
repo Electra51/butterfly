@@ -3,7 +3,7 @@
 import Image from "next/image";
 import logo from "../../assets/logo/new.png";
 import { AiOutlineUser } from "react-icons/ai";
-import { useContext, useEffect, useState } from "react";
+import { startTransition, useContext, useEffect, useState } from "react";
 import Link from "next/link";
 import NavLink from "./NavLink";
 import useAuth from "@/hooks/useAuth";
@@ -35,20 +35,30 @@ const Navbar = () => {
   const handleLogout = async () => {
     const toastId = toast.loading("Loading...");
     try {
+      // Step 1: Call the logout function
       await logout();
+
+      // Step 2: Send a POST request to /api/auth/logout
       const res = await fetch("/api/auth/logout", {
         method: "POST",
       });
-      await res.json();
+
+      // Step 3: Check the current path and redirect if necessary
       if (path.includes("/dashboard") || path.includes("/profile")) {
         replace(`/login?redirectUrl=${path}`);
       }
+
+      // Step 4: Show a success message
       toast.dismiss(toastId);
       toast.success("Successfully logout!");
+
+      // Step 5: Refresh the UI
       startTransition(() => {
         refresh();
       });
     } catch (error) {
+      console.log("error", error);
+      // Step 5 (alternative): Handle errors and show an error message
       toast.error("Successfully not logout!");
       toast.dismiss(toastId);
     }
@@ -112,9 +122,17 @@ const Navbar = () => {
         navbar ? "bg-black shadow-lg" : "bg-black bg-opacity-5"
       } text-white lg:pr-3`}>
       <div className="flex-1">
-        <Link href="/">
-          <Image src={logo} alt="logo" width={140} priority />
-        </Link>
+        <div className="w-[92px] lg:w-[140px]">
+          <Link href="/">
+            <Image
+              src={logo}
+              alt="logo"
+              width={140}
+              className="w-full h-full object-fill"
+              priority
+            />
+          </Link>
+        </div>
       </div>
       <div
         className={`absolute ${
@@ -262,7 +280,7 @@ const Navbar = () => {
           </Link>
         )}
       </div>
-      <label className="swap-rotate swap btn-ghost btn-circle btn ml-2 bg-white lg:hidden">
+      <label className="swap-rotate swap rounded-full h-8 w-8 bg-[#C2A74E] lg:hidden">
         <input
           checked={navToggle}
           onChange={() => setNavToggle((pre) => !pre)}
@@ -271,17 +289,17 @@ const Navbar = () => {
         <svg
           className="swap-off fill-current"
           xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
-          viewBox="0 0 512 512">
+          width="18"
+          height="18"
+          viewBox="0 0 480 480">
           <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
         </svg>
         <svg
           className="swap-on fill-current"
           xmlns="http://www.w3.org/2000/svg"
-          width="32"
-          height="32"
-          viewBox="0 0 512 512">
+          width="18"
+          height="18"
+          viewBox="0 0 480 480">
           <polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
         </svg>
       </label>

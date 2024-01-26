@@ -36,16 +36,16 @@ const Login = () => {
       const user = await signIn(email, password);
       await createJWT({ email });
       toast.dismiss(toastId);
-      toast.success("User signed in successfully");
+      // toast.success("User signed in successfully");
 
-      replace(from);
+      // replace(from);
 
-      // startTransition(() => {
-      //   refresh();
-      //   replace(from);
-      //   toast.dismiss(toastId);
-      //   toast.success("User signed in successfully");
-      // });
+      startTransition(() => {
+        refresh();
+        replace(from);
+        toast.dismiss(toastId);
+        toast.success("User signed in successfully");
+      });
     } catch (error) {
       toast.dismiss(toastId);
       toast.error(error.message || "User not signed in");
@@ -73,8 +73,7 @@ const Login = () => {
         height: "100vh",
         backgroundPosition: "center",
         backgroundSize: "cover",
-      }}
-    >
+      }}>
       <div className="max-w-sm mx-auto pt-14 relative">
         <div className="pb-8 text-center">
           <h3 className="text-5xl font-bold text-black"> LOG IN </h3>
@@ -185,15 +184,13 @@ const Login = () => {
             <button
               className="button b1 mt-7 text-[14px]"
               type="submit"
-              onClick={() => signIn("github")}
-            >
+              onClick={() => signIn("github")}>
               Login with Github <AiOutlineGithub className="text-2xl" />
             </button>
             <button
               className="button b1 mt-7 text-[14px]"
               type="submit"
-              onClick={handleGoogleLogin}
-            >
+              onClick={handleGoogleLogin}>
               Login with Google <FcGoogle className="text-2xl " />
             </button>
           </div>

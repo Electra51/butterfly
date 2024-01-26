@@ -22,14 +22,14 @@ export default function Home() {
       <CompanyLogo />
       <FeatureService />
       <About />
-      {/* <OurCare /> */}
+      <OurCare />
       <FeaturedProducts />
       <Testimonials />
       <ImageGallery />
       <WhyChoose />
-      <PricingPlan />
+      {/* <PricingPlan />
       <ContactUs />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }

@@ -4,8 +4,8 @@ import imgC from "../../../assets/coverLogo/hotStoneTherapy.jpg";
 const WhyChoose = () => {
   return (
     <div className="text-white text-justify relative mt-32">
-      <div className="bg-[#C2A74E] max-w-5xl">
-        <div className="max-w-lg px-5 py-14 ml-32">
+      <div className="bg-[#C2A74E] max-w-full lg:max-w-5xl">
+        <div className="max-w-[18rem] lg:max-w-lg px-5 py-14 lg:ml-32">
           <p className="text-white">Our Benefit</p>
           <p className="text-4xl mt-1 font-bold text-white tracking-[0.2rem]">
             Why Choose Us?
@@ -44,7 +44,7 @@ const WhyChoose = () => {
           </div>
         </div>
       </div>
-      <div className="absolute top-12 right-0 h-80 w-1/2">
+      <div className="hidden lg:flex absolute top-12 right-0 h-80 w-1/2">
         <Image src={imgC} alt="" className="h-full w-full object-cover" />
       </div>
     </div>

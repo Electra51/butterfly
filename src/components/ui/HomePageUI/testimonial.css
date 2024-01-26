@@ -1,5 +1,12 @@
 .slick-slider {
   /* margin: 0 40%; */
 
-  margin-right: 5%;
+  margin-right: 0%;
+}
+
+.slick-prev {
+  left: 3px !important;
+}
+.slick-next {
+  right: 2px !important;
 }

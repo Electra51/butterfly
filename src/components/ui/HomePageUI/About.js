@@ -8,18 +8,18 @@ import Link from "next/link";
 const About = () => {
   return (
     <div className="care py-12 bg-fixed mt-32">
-      <div className="grid grid-cols-2 gap-6 items-center max-w-6xl mx-auto ">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center max-w-[19rem] lg:max-w-6xl mx-auto ">
         <div>
           <Image
             src={aboutImage}
             alt=""
             width={500}
             priority
-            className="transition duration-300 ease-in-out hover:scale-110"
+            className="lg:flex hidden transition duration-300 ease-in-out hover:scale-110"
           />
         </div>
         <div className="overlay overlay_2 p-10">
-          <p className="tracking-[0.1rem] text-2xl border-b w-80 text-start font-bold text-white">
+          <p className="tracking-[0.1rem] text-2xl border-b w-40 lg:w-80 text-start font-bold text-white">
             About us
           </p>
           <p className="text-justify tracking-[0.01rem] mt-5 text-white">

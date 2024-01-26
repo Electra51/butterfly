@@ -69,15 +69,15 @@ const SignUp = () => {
         displayName: name,
         photoURL: photo,
       });
-      replace(from);
-      toast.dismiss(toastId);
-      toast.success("User signed in successfully");
-      // startTransition(() => {
-      //   refresh();
-      //   replace(from);
-      //   toast.dismiss(toastId);
-      //   toast.success("User signed in successfully");
-      // });
+      // replace(from);
+      // toast.dismiss(toastId);
+      // toast.success("User signed in successfully");
+      startTransition(() => {
+        refresh();
+        replace(from);
+        toast.dismiss(toastId);
+        toast.success("User signed in successfully");
+      });
     } catch (error) {
       toast.dismiss(toastId);
       toast.error(error.message || "User not signed in");
@@ -104,8 +104,7 @@ const SignUp = () => {
         height: "100vh",
         backgroundPosition: "center",
         backgroundSize: "cover",
-      }}
-    >
+      }}>
       <div className="max-w-lg mx-auto pt-10 relative">
         <div className="pb-4 text-center">
           <h3 className="text-5xl font-bold text-black ">SIGN UP</h3>
@@ -119,8 +118,7 @@ const SignUp = () => {
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="grid grid-cols-2 space-y-2 gap-3 items-center"
-        >
+          className="grid grid-cols-2 space-y-2 gap-3 items-center">
           {/* <div className="flex flex-col mt-3">
             <label>UserName</label>
             <input
@@ -320,8 +318,7 @@ const SignUp = () => {
           <button
             className="buttons bs mt-7 text-[14px]"
             type="submit"
-            onClick={handleGoogleLogin}
-          >
+            onClick={handleGoogleLogin}>
             Login with Google <FcGoogle className="text-2xl " />
           </button>
         </div>
