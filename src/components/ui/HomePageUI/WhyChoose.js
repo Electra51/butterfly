@@ -5,7 +5,7 @@ const WhyChoose = () => {
   return (
     <div className="text-white text-justify relative mt-32">
       <div className="bg-[#C2A74E] max-w-full lg:max-w-5xl">
-        <div className="max-w-[18rem] lg:max-w-lg px-5 py-14 lg:ml-32">
+        <div className="max-w-[18rem] lg:max-w-lg px-5 py-14 mx-auto lg:ml-32">
           <p className="text-white">Our Benefit</p>
           <p className="text-4xl mt-1 font-bold text-white tracking-[0.2rem]">
             Why Choose Us?
@@ -18,7 +18,7 @@ const WhyChoose = () => {
             enhance our appearance and boost our self-esteem
           </p>
 
-          <div className="flex items-center justify-center gap-3 divide-x-2 divide-white mt-5">
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-3 divide-x-2 divide-white mt-5">
             <div className="flex items-center gap-5">
               <div className="h-8 w-8 bg-white flex justify-center items-center p-2 rounded-full">
                 <LiaCheckSolid className="text-black" />
@@ -30,7 +30,7 @@ const WhyChoose = () => {
               your natural features.
             </p>
           </div>
-          <div className="flex items-center justify-center gap-3 divide-x-2 divide-white mt-5">
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-3 divide-x-2 divide-white mt-5">
             <div className="flex items-center gap-5">
               <div className="h-8 w-8 bg-white flex justify-center items-center p-2 rounded-full">
                 <LiaCheckSolid className="text-black" />

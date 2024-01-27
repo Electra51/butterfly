@@ -27,9 +27,9 @@ export default function Home() {
       <Testimonials />
       <ImageGallery />
       <WhyChoose />
-      {/* <PricingPlan />
+      <PricingPlan />
       <ContactUs />
-      <Footer /> */}
+      {/* <Footer /> */}
     </div>
   );
 }
