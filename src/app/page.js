@@ -29,7 +29,7 @@ export default function Home() {
       <WhyChoose />
       <PricingPlan />
       <ContactUs />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
