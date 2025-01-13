@@ -12,6 +12,8 @@ import logo9 from "../../../assets/company/logo9.png";
 import logo10 from "../../../assets/company/logo10.png";
 import logo11 from "../../../assets/company/logo11.png";
 import logo12 from "../../../assets/company/logo12.png";
+import logo13 from "../../../assets/company/logo13.png";
+import logo14 from "../../../assets/company/logo14.png";
 import Image from "next/image";
 const CompanyLogo = () => {
   const settings = {
@@ -50,8 +52,8 @@ const CompanyLogo = () => {
     ],
   };
   return (
-    <div className="mx-7 mt-[-42px]">
-      <Slider {...settings}>
+    <div className="mt-[160px] bg-[#fff9e6] py-32">
+      <Slider {...settings} className="">
         <div>
           <div className="h-32 w-32 flex justify-center items-center mt-5 mb-0">
             <Image
@@ -173,6 +175,28 @@ const CompanyLogo = () => {
           <div className="h-32 w-32 flex justify-center items-center mt-5">
             <Image
               src={logo12}
+              alt=""
+              className="w-full object-cover"
+              priority
+            />
+          </div>
+        </div>
+        <div>
+          {" "}
+          <div className="h-32 w-32 flex justify-center items-center mt-5">
+            <Image
+              src={logo13}
+              alt=""
+              className="w-full object-cover"
+              priority
+            />
+          </div>
+        </div>
+        <div>
+          {" "}
+          <div className="h-32 w-32 flex justify-center items-center mt-5">
+            <Image
+              src={logo13}
               alt=""
               className="w-full object-cover"
               priority

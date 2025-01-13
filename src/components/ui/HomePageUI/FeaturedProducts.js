@@ -8,7 +8,7 @@ const FeaturedProducts = async () => {
   const allProducts = await getProducts();
   console.log(allProducts);
   return (
-    <div className="mt-32 flex flex-col justify-center max-w-[18rem] lg:max-w-6xl mx-auto relative">
+    <div className="mt-[170px] flex flex-col justify-center max-w-[18rem] lg:max-w-6xl mx-auto relative">
       <SectionTitle heading={"Our Products"}></SectionTitle>
       <Link
         href="/shop"

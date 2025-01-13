@@ -7,7 +7,7 @@ import { BsArrowRightShort } from "react-icons/bs";
 import Link from "next/link";
 const About = () => {
   return (
-    <div className="care py-12 bg-fixed mt-32">
+    <div className="care py-20 bg-fixed mt-[180px]">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center max-w-[19rem] lg:max-w-6xl mx-auto ">
         <div>
           <Image

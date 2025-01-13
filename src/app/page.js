@@ -13,19 +13,21 @@ import OurProduct from "@/components/ui/AboutUsPageUI/OurProduct";
 import FeaturedProducts from "@/components/ui/HomePageUI/FeaturedProducts";
 import WhyChoose from "@/components/ui/HomePageUI/WhyChoose";
 import ContactUs from "@/components/ui/HomePageUI/ContactUs";
+import ExtraFeature from "@/components/ui/HomePageUI/ExtraFeature";
 
 export default function Home() {
   return (
     <div>
       <Navbar />
       <Banner />
-      <CompanyLogo />
+      <ExtraFeature />
       <FeatureService />
       <About />
       <OurCare />
       <FeaturedProducts />
       <Testimonials />
       <ImageGallery />
+      <CompanyLogo />
       <WhyChoose />
       <PricingPlan />
       <ContactUs />

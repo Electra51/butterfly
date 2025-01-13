@@ -16,7 +16,7 @@ export const metadata = {
 // className={montserrat.className}
 export default async function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="light">
       <body>
         <Providers>
           {" "}

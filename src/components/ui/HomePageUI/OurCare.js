@@ -12,7 +12,7 @@ import logo6 from "../../../assets/logo/logo6.png";
 import "./button.css";
 const OurCare = () => {
   return (
-    <div className="mt-32 py-12">
+    <div className="mt-[160px] py-12">
       <SectionTitle heading={"Our Philoshophy"} />
 
       <div className="hidden lg:grid grid-cols-3 justify-center items-center gap-2 mt-16">

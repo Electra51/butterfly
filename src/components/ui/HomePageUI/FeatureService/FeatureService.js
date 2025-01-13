@@ -10,7 +10,7 @@ const FeatureService = async () => {
   );
 
   return (
-    <div className="mt-32 flex flex-col justify-center max-w-[18rem] lg:max-w-6xl mx-auto">
+    <div className="mt-[160px] flex flex-col justify-center max-w-[18rem] lg:max-w-6xl mx-auto">
       <SectionTitle heading={"Featured Services"} />
       <Link href="/services">
         {" "}

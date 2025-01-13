@@ -9,6 +9,7 @@ module.exports = {
     // fontFamily: {
     //   montserrat: "--font-montserrat",
     // },
+
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -23,6 +24,9 @@ module.exports = {
     },
   },
   plugins: [require("daisyui")],
+  daisyui: {
+    themes: ["light"],
+  },
 };
 
 //  apiKey: process.env.NEXT_PUBLIC_apiKey,
